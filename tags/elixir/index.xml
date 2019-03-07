@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elixir on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/elixir/</link>
+    <description>Recent content in Elixir on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Fri, 14 Oct 2016 13:50:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Elixir voor de Erlang VM</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/elixir/</link>
+      <pubDate>Fri, 14 Oct 2016 13:50:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/elixir/</guid>
+      <description>&lt;p&gt;De programmeertaal &lt;em&gt;Elixir&lt;/em&gt; is modernere taal voor de Erlang VM.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

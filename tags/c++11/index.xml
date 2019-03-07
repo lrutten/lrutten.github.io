@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;11 on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/c&#43;&#43;11/</link>
+    <description>Recent content in C&#43;&#43;11 on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Wed, 09 Nov 2016 14:03:03 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/c++11/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Labo C&#43;&#43;11 concurrency</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/lab-concurrency/</link>
+      <pubDate>Wed, 09 Nov 2016 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/lab-concurrency/</guid>
+      <description>&lt;p&gt;C++11 kent een aantal nieuwe technieken om concurrency in een programma in te bouwen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;11 Lambdafuncties</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/labo-lambda/</link>
+      <pubDate>Thu, 10 Dec 2015 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/labo-lambda/</guid>
+      <description>&lt;p&gt;Lambdafuncties zijn een belangrijke aanvulling in C++11.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

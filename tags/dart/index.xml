@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dart on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/dart/</link>
+    <description>Recent content in Dart on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Wed, 16 Nov 2016 10:00:03 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/dart/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Een Dart webserver voorbeeld in Docker</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/docker-dart/</link>
+      <pubDate>Wed, 16 Nov 2016 10:00:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/docker-dart/</guid>
+      <description>&lt;p&gt;Dart is de scripting taal van Google.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Dart SDK</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/dart-sdk/</link>
+      <pubDate>Thu, 06 Oct 2016 12:01:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/dart-sdk/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Dart&lt;/em&gt; is een programmeertaal die een mogelijke Javascript vervanger is.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

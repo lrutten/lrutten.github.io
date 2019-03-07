@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Tue, 28 Nov 2017 17:49:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>De som van een reeks in C&#43;&#43;</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/cpp-som/</link>
+      <pubDate>Tue, 28 Nov 2017 17:49:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/cpp-som/</guid>
+      <description>&lt;p&gt;Dit artikel legt uit hoe je op verschillende manieren de sam van een
+reeks gehele getallen kan berekenen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Functors en lambdafuncties</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/cpp-functor/</link>
+      <pubDate>Tue, 28 Nov 2017 17:39:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/cpp-functor/</guid>
+      <description>&lt;p&gt;Dit artikel legt uit hoe je de capture bij lambdafuncties moet begrijpen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Een Wt voorbeeld in Docker</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/wt-in-docker/</link>
+      <pubDate>Tue, 29 Nov 2016 18:16:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/wt-in-docker/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Wt&lt;/em&gt; werkt ook in een Docker container.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Labo C&#43;&#43;11 concurrency</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/lab-concurrency/</link>
+      <pubDate>Wed, 09 Nov 2016 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/lab-concurrency/</guid>
+      <description>&lt;p&gt;C++11 kent een aantal nieuwe technieken om concurrency in een programma in te bouwen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Een eerste Wt voorbeeld in C&#43;&#43;</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/eerste-wt-voorbeeld/</link>
+      <pubDate>Tue, 08 Nov 2016 14:00:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/eerste-wt-voorbeeld/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Wt&lt;/em&gt; is een klein C++ webframework dat veel gelijkenissen vertoont met Qt.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Functietemplates in C&#43;&#43;</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/labo-functie-template/</link>
+      <pubDate>Fri, 11 Dec 2015 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/labo-functie-template/</guid>
+      <description>&lt;p&gt;Templates kunnen ook gebruikt worden om functies te parametreren met een type.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>STL algoritmen met C array en C&#43;&#43; vector</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/labo-algo-array-vector/</link>
+      <pubDate>Fri, 11 Dec 2015 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/labo-algo-array-vector/</guid>
+      <description>&lt;p&gt;In dit voorbeeld wordt getoond dat je een &lt;code&gt;for_each&lt;/code&gt; algoritme
+zowel bij een C array als bij een C++ &lt;code&gt;vector&lt;/code&gt; kan toepassen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;11 Lambdafuncties</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/labo-lambda/</link>
+      <pubDate>Thu, 10 Dec 2015 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/labo-lambda/</guid>
+      <description>&lt;p&gt;Lambdafuncties zijn een belangrijke aanvulling in C++11.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

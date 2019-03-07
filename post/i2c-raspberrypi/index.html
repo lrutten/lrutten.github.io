@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>I2C op Raspberry Pi vanuit C</title>
+
+  <meta name="author" content="" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="I2C op Raspberry Pi vanuit C" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/post/i2c-raspberrypi//" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+    <h1>een lange titel</h1>
+    
+    
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+          <a title="Start" href="/">Start</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="Over" href="/page/over/">Over</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>I2C op Raspberry Pi vanuit C</h1>
+      
+      
+      
+      <span class="post-meta">Gepost op 23-09-2016</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          <p>Vanuit een C programma kan je hardware aanspreken die via de I2C bus
+gekoppeld is met de Raspberry Pi.</p>
+
+<p>De eerste stap is een update.</p>
+
+<pre><code>apt-get update
+apt-get upgrade
+</code></pre>
+
+<p>Hierna worden de <code>i2c-tools</code> geïnstalleerd.</p>
+
+<pre><code>apt-get install i2c-tools
+</code></pre>
+
+<p>Om ervoor te zorgen dat I2C ondersteund wordt na reboot, wordt dit ingesteld
+met <code>raspi-config</code>. Deze schrijft dan deze regel in <code>/boot/config.txt</code>:</p>
+
+<pre><code>dtparam=i2c_arm=on
+</code></pre>
+
+<p>Dit zijn dan de geladen modules. Het kan wel zijn dat <code>i2c_dev</code> nog manueel
+geladen moet worden.</p>
+
+<pre><code>Module                  Size  Used by
+i2c_dev                 5295  0 
+evdev                   8678  2 
+i2c_bcm2708             3678  0 
+i2c_core               24407  2 i2c_bcm2708,i2c_dev
+</code></pre>
+
+<p>Dit zijn dan de I2C devices.
+Deze devices moeten er zijn opdat i2cdetect zou werken.</p>
+
+<pre><code>crw-rw---T 1 root i2c 89, 0 Jun 27 09:32 /dev/i2c-0                                                                                                                                                            
+crw-rw---T 1 root i2c 89, 1 Jun 27 09:32 /dev/i2c-1                                                                                                                                                            
+</code></pre>
+
+<p>De driver is geregistreerd onder nummer 89.</p>
+
+<pre><code>cat /proc/devices                                                                                                                                                                    
+Character devices:                                                                                                                                                                                             
+ 89 i2c   
+</code></pre>
+
+<p>Nu kan de detectie gebeuren. Er is een PCF8574P gebruikt.
+Dit is nog een oude component uit het TTL tijdperk.
+En bijgevolg vraagt die nog 5V, dus voeden met 5V.</p>
+
+<pre><code># i2cdetect -l
+i2c-0   i2c             bcm2708_i2c.0                           I2C adapter
+i2c-1   i2c             bcm2708_i2c.1                           I2C adapter
+</code></pre>
+
+<p>Dit komt overeen met de <code>/dev</code> devices.
+De detectie van de adressen levert dit op:</p>
+
+<pre><code># i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: 20 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- -- 
+</code></pre>
+
+<p>Het adres van de PCF8574P is zo opgebouwd:</p>
+
+<pre><code>+--+--+--+--+--+--+--+
+| 0| 1| 0| 0|A2|A1|A0|
++--+--+--+--+--+--+--+
+</code></pre>
+
+<p>Als alle A ingangen 0 gemaakt wordt, klopt dit.</p>
+
+<p>Er wordt een leestest uitgevoerd met wiringPi (<code>http://wiringpi.com/</code>).
+Deze bibliotheek wordt eerst geïnstalleerd.</p>
+
+<pre><code>git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+</code></pre>
+
+<p>Het volgende testprogramma voert een read van 1 byte uit.</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;wiringPi.h&gt;
+
+int main()
+{
+   printf(&quot;test read i2c\n&quot;);
+   int fd = wiringPiI2CSetup(0x21);
+
+   int val = wiringPiI2CRead(fd);
+   printf(&quot;read val %x\n&quot;, val);
+
+   return 0;
+}
+</code></pre>
+
+<p>Dit is de <code>Makefile</code>:</p>
+
+<pre><code>all: readi2c
+
+readi2c: readi2c.o
+        gcc -o readi2c readi2c.o -lwiringPi
+
+readi2c.o: readi2c.c
+        gcc -c readi2c.c
+</code></pre>
+
+<p>Bij een read met zwevende ingangen wordt een <code>0xff</code> teruggelezen.
+Wanneer een ingangspin met GND verbonden wordt, wordt een 0 teruggelezen.</p>
+
+<p>Dit is pinlayout van de PCF8574P.</p>
+
+<pre><code>     A0 1 u 16 VDD 5V
+     A1 2   15 SDA 
+     A2 3   14 SCL
+     P0 4   13 /INT
+     P1 5   12 P7
+     P2 6   11 P6
+     P3 7   10 P5
+GND VSS 8    9 P4
+</code></pre>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="http://eaict.technologiecampusdiepenbeek.be/post/idea-2016.2.4/" data-toggle="tooltip" data-placement="top" title="Nieuwe versie Idea 2016 2.4">&larr; Vorige post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="http://eaict.technologiecampusdiepenbeek.be/post/rebar3/" data-toggle="tooltip" data-placement="top" title="rebar3">Volgende post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		      
+		      
+		      
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  2017
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
+<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
+<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-92842352-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+</html>

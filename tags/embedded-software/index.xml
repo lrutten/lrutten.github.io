@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Embedded Software on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/embedded-software/</link>
+    <description>Recent content in Embedded Software on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Fri, 23 Sep 2016 11:00:03 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/embedded-software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I2C op Raspberry Pi vanuit C</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/i2c-raspberrypi/</link>
+      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/i2c-raspberrypi/</guid>
+      <description>&lt;p&gt;Vanuit een C programma kan je hardware aanspreken die via de I2C bus
+gekoppeld is met de Raspberry Pi.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

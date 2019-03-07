@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nieuws on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/nieuws/</link>
+    <description>Recent content in Nieuws on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Thu, 10 Nov 2016 17:00:03 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/nieuws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Start eaict blog</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/start-blog/</link>
+      <pubDate>Thu, 10 Nov 2016 17:00:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/start-blog/</guid>
+      <description>&lt;p&gt;Dit is de start van de &lt;em&gt;eaict&lt;/em&gt; blog. Deze blog meldt tips en beperkt nieuws
+over programmeertalen, Linux en aanverwante thema&amp;rsquo;s.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nieuwe versie Idea 2016 2.4</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/idea-2016.2.4/</link>
+      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/idea-2016.2.4/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Idea 2016 2.4&lt;/em&gt; is geïnstalleerd op &lt;literal&gt;afss1&lt;/literal&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

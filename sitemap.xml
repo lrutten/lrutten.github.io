@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/cpp-som/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/cpp-functor/</loc>
+    <lastmod>2017-11-28T17:39:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/erlang-nodes-in-docker/</loc>
+    <lastmod>2016-12-13T11:28:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/wt-in-docker/</loc>
+    <lastmod>2016-11-29T18:16:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/docker-dart/</loc>
+    <lastmod>2016-11-16T10:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/start-blog/</loc>
+    <lastmod>2016-11-10T17:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/lab-concurrency/</loc>
+    <lastmod>2016-11-09T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/eerste-wt-voorbeeld/</loc>
+    <lastmod>2016-11-08T14:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/elixir/</loc>
+    <lastmod>2016-10-14T13:50:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/dart-sdk/</loc>
+    <lastmod>2016-10-06T12:01:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/rebar3/</loc>
+    <lastmod>2016-09-23T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/i2c-raspberrypi/</loc>
+    <lastmod>2016-09-23T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/idea-2016.2.4/</loc>
+    <lastmod>2016-09-23T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-2/</loc>
+    <lastmod>2016-06-30T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/arduino-primo/</loc>
+    <lastmod>2016-05-18T14:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/sparkdemo-in-kotlin/</loc>
+    <lastmod>2016-05-07T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/astudio2/</loc>
+    <lastmod>2016-04-14T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/labo-functie-template/</loc>
+    <lastmod>2015-12-11T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/labo-functie-pointer/</loc>
+    <lastmod>2015-12-11T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/labo-algo-array-vector/</loc>
+    <lastmod>2015-12-11T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/labo-struct-functie/</loc>
+    <lastmod>2015-12-11T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/labo-lambda/</loc>
+    <lastmod>2015-12-10T14:03:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/websocket-met-sparkdemo/</loc>
+    <lastmod>2015-10-30T11:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-1/</loc>
+    <lastmod>2013-11-04T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-0/</loc>
+    <lastmod>2012-09-28T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-37/</loc>
+    <lastmod>2011-04-27T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-1/</loc>
+    <lastmod>2010-05-24T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-0/</loc>
+    <lastmod>2009-08-26T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-2/</loc>
+    <lastmod>2008-12-10T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/intro-sed/</loc>
+    <lastmod>2008-11-14T14:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-1/</loc>
+    <lastmod>2008-05-02T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-0/</loc>
+    <lastmod>2007-07-01T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-11-0/</loc>
+    <lastmod>2006-10-02T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-2/</loc>
+    <lastmod>2005-09-14T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-1/</loc>
+    <lastmod>2005-02-02T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-0/</loc>
+    <lastmod>2004-06-23T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-9-1/</loc>
+    <lastmod>2003-09-26T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-9-0/</loc>
+    <lastmod>2003-03-19T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-8-1/</loc>
+    <lastmod>2002-06-18T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-8-0/</loc>
+    <lastmod>2001-07-01T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-7-1/</loc>
+    <lastmod>2000-06-22T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-7-0/</loc>
+    <lastmod>1999-10-25T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-4-0/</loc>
+    <lastmod>1999-05-17T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-9/</loc>
+    <lastmod>1999-05-10T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-6/</loc>
+    <lastmod>1998-10-28T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-5/</loc>
+    <lastmod>1998-06-09T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-4/</loc>
+    <lastmod>1997-10-14T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-3/</loc>
+    <lastmod>1997-06-11T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-2/</loc>
+    <lastmod>1997-02-17T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-1/</loc>
+    <lastmod>1996-06-03T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-0/</loc>
+    <lastmod>1995-11-30T11:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/pdp8/</loc>
+    <lastmod>1975-09-21T14:00:03+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/android/</loc>
+    <lastmod>2016-04-14T14:03:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/arduino/</loc>
+    <lastmod>2016-05-18T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/assembler/</loc>
+    <lastmod>1975-09-21T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/bash/</loc>
+    <lastmod>2008-11-14T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/c/</loc>
+    <lastmod>2016-09-23T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/c&#43;&#43;/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/c&#43;&#43;11/</loc>
+    <lastmod>2016-11-09T14:03:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/dart/</loc>
+    <lastmod>2016-11-16T10:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/distributies/</loc>
+    <lastmod>2016-06-30T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/docker/</loc>
+    <lastmod>2016-12-13T11:28:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/elixir/</loc>
+    <lastmod>2016-10-14T13:50:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/embedded-software/</loc>
+    <lastmod>2016-09-23T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/erlang/</loc>
+    <lastmod>2016-12-13T11:28:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/infcq/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/infrastructuur/</loc>
+    <lastmod>2016-11-10T17:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/java/</loc>
+    <lastmod>2016-04-14T14:03:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/kotlin/</loc>
+    <lastmod>2016-05-07T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/lambda/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/linux/</loc>
+    <lastmod>2016-06-30T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/mynewt/</loc>
+    <lastmod>2016-05-18T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/nieuws/</loc>
+    <lastmod>2016-11-10T17:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/page/over/</loc>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/post/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/programmeertalen/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/raspberry-pi/</loc>
+    <lastmod>2016-09-23T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/rtos/</loc>
+    <lastmod>2016-05-18T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/shellscript/</loc>
+    <lastmod>2008-11-14T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/single-board-computers/</loc>
+    <lastmod>2016-05-18T14:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/slackware/</loc>
+    <lastmod>2016-06-30T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/spark/</loc>
+    <lastmod>2016-05-07T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/stl/</loc>
+    <lastmod>2015-12-11T14:03:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/</loc>
+    <lastmod>2016-04-14T14:03:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/tools/</loc>
+    <lastmod>2016-09-23T11:00:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/categories/web/</loc>
+    <lastmod>2016-11-29T18:16:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/tags/wt/</loc>
+    <lastmod>2016-11-29T18:16:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://eaict.technologiecampusdiepenbeek.be/</loc>
+    <lastmod>2017-11-28T17:49:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

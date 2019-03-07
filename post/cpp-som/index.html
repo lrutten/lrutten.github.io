@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>De som van een reeks in C&#43;&#43;</title>
+
+  <meta name="author" content="" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="De som van een reeks in C&#43;&#43;" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/post/cpp-som//" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+    <h1>een lange titel</h1>
+    
+    
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+          <a title="Start" href="/">Start</a>
+  	      </li>
+  	    
+      
+        
+          <li>
+          <a title="Over" href="/page/over/">Over</a>
+  	      </li>
+  	    
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>De som van een reeks in C&#43;&#43;</h1>
+      
+      
+      
+      <span class="post-meta">Gepost op 28-11-2017</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          <p>Dit artikel legt uit hoe je op verschillende manieren de sam van een
+reeks gehele getallen kan berekenen.</p>
+
+<h2 id="de-nodige-include-s">De nodige <code>include</code>s</h2>
+
+<p>Vermits we in C++ programmeren, zijn dit de benodigde includes.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&lt;iostream&gt;</span><span style="color:#8f5902;font-style:italic">
+</span><span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&lt;functional&gt;</span><span style="color:#8f5902;font-style:italic">
+</span><span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&lt;vector&gt;</span><span style="color:#8f5902;font-style:italic">
+</span><span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&lt;memory&gt;</span><span style="color:#8f5902;font-style:italic">
+</span></code></pre></div>
+<h2 id="pointers-doorgeven">Pointers doorgeven</h2>
+
+<p>De eerste variant is volledig in een C stijl met pointers geschreven.
+Om de lijst te bepalen wordt met <code>begin</code> een pointer naar het eerste element doorgegeven
+en met <code>end</code> wordt een pointer doorgegeven die voorbij het laatste element wijst.
+Dat laatste is misschien een eigenaardigheid maar dit wordt door de compiler toegestaan.</p>
+
+<p>Deze programmeerstijl komt van assembler.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">som_a</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">{</span>
+   <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+
+   <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+   <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div>
+<p>Uiteraard is <code>s</code> een lokale variabele die uiteindelijk teruggegeven wordt.
+Zo wordt <code>som_a()</code> gestart.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">};</span>
+
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_a</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s1 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s1</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div>
+<p>Als einde wordt <code>&amp;tab1[5]</code> doorgegeven.</p>
+
+<h2 id="de-bewerking-als-lambdafunctie">De bewerking als lambdafunctie</h2>
+
+<p>In het volgende fragment wordt de bewerking als een lambdafunctie doorgegeven.
+Dit wordt dan de 3de parameter <code>fu</code>. Als we een lambdafunctie in een variabele willen opslaan
+nemen we meestal <code>auto</code> als type.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">som_b</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">auto</span> <span style="color:#000">fu</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">{</span>
+   <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+
+   <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">fu</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">);</span>
+   <span style="color:#000;font-weight:bold">}</span>
+   <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div>
+<p>Hieronder wordt de lambdafunctie meegegeven met de oproep van <code>som_b()</code>.
+De lambdafunctie krijgt twee gehele getallen als parameter en geeft een geheel
+getal terug.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_b</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s2 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s2</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div>
+<h2 id="template-maakt-algemeen">Template maakt algemeen</h2>
+
+<p>Om niet altijd de <code>som()</code> opnieuw te moeten schrijven als je
+met een andere type dan <code>int</code> wil werken, is <em>template</em> de uitkomst.
+Met deze oplssing worden een aantal types algemaan gemaakt. In de volgende
+variant zijn dat de type <code>T</code> en <code>U</code>. <code>T</code> is het type van de wijzer en <code>U</code> is het type
+van de waarde die in de lambdafunctie wordt behandeld.</p>
+
+<p>Met <code>std::function&lt;U(U,U)&gt;</code> wordt het type van de lambdafunctie vastgelegd.
+Wanneer in het voorbeeld een concrete lambdafunctie wordt doorgegeven aan <code>fu</code>,
+zal <code>U</code> vervangen worden door <code>int</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">template</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">typename</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">typename</span> <span style="color:#000">U</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">som_c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span> <span style="color:#000">begin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">T</span> <span style="color:#000">end</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">function</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">U</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">U</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">U</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">fu</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">{</span>
+   <span style="color:#000">U</span> <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+
+   <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">fu</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">);</span>
+   <span style="color:#000;font-weight:bold">}</span>
+   <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div>
+<p>In de oproep van <code>som_c()</code> verandert er niet veel ten opzichte van <code>som_b()</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s3</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_c</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s3 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s3</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div>
+<p>Je kan ook een variabele maken om een lambdafunctie bij te houden.
+Dit gebeurt in het volgende fragment. Bij <code>f1</code> wordt <code>std::function</code>
+gebruikt in de declaratie. Bij <code>f2</code> is dat <code>auto</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">function</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">f1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">};</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;f1 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#204a87;font-weight:bold">typeid</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">f1</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">auto</span> <span style="color:#000">f2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">};</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;f2 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#204a87;font-weight:bold">typeid</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">f2</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s4a</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">f1</span><span style="color:#000;font-weight:bold">);</span>
+
+<span style="color:#8f5902;font-style:italic">// geeft fout
+</span><span style="color:#8f5902;font-style:italic">//int s4b = som_c(&amp;tab1[0], &amp;tab1[5], f2);
+</span></code></pre></div>
+<p>Het blijkt nu wel dat bij het doorgeven van <code>f2</code> met <code>auto</code> als type
+niet compatibel is met de parameter met als type <code>std::function&lt;U(U,U)&gt;</code>.
+Daarom wordt nog een variant van <code>som()</code> gemaakt.</p>
+
+<h2 id="een-variant-met-template">Een variant met template</h2>
+
+<p>Het type <code>std::function&lt;U(U,U)&gt;</code> wordt nu vervangen door <code>Fu</code>.
+Nu kunnen <code>auto</code> lambda&rsquo;s wel doorgegeven worden.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">template</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">typename</span> <span style="color:#000">T</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">typename</span> <span style="color:#000">Fu</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span> <span style="color:#000">begin</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">T</span> <span style="color:#000">end</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">Fu</span> <span style="color:#000">fu</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">{</span>
+   <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+
+   <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">T</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">p</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">s</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">fu</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">);</span>
+   <span style="color:#000;font-weight:bold">}</span>
+   <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">s</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div>
+<p>Nu kan <code>f2</code> wel doorgegeven worden.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s4c</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">f2</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div>
+<p>In de lambdafunctie kan ook <code>auto</code> als parametertype gebruikt worden.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s4</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">auto</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">auto</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">decltype</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s4 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s4</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s5</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">decltype</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s5 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s5</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s6</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab1</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s6 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s6</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div>
+<p>Hierboven staan een aantal varianten van de lambdafunctie.</p>
+
+<p>Het is ook mogelijk om in de oproep verwijzingen naar de elementen
+van een <code>vector</code> door te geven.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">vector</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">tab2</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span> <span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">4</span> <span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#000;font-weight:bold">};</span>
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s7</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab2</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">tab2</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s7 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s7</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">s8</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">som_d</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">tab2</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">begin</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">tab2</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000;font-weight:bold">[](</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#204a87;font-weight:bold">int</span>
+   <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">acc</span><span style="color:#000;font-weight:bold">;</span>
+   <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;s8 &#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">s8</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">\n</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div>
+<p>Bij <code>vector</code> kan je voor de verwijzingen naast de arraynotatie ook <code>begin()</code> en <code>end()</code> gebruiken.</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="http://eaict.technologiecampusdiepenbeek.be/post/cpp-functor/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; Functors en lambdafuncties">&larr; Vorige post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		      
+		      
+		      
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  2017
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
+<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
+<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-92842352-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+</html>

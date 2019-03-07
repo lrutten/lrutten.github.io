@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erlang on eaict</title>
+    <link>http://eaict.technologiecampusdiepenbeek.be/tags/erlang/</link>
+    <description>Recent content in Erlang on eaict</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-BE</language>
+    <lastBuildDate>Tue, 13 Dec 2016 11:28:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/erlang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Erlang nodes in Docker</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/erlang-nodes-in-docker/</link>
+      <pubDate>Tue, 13 Dec 2016 11:28:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/erlang-nodes-in-docker/</guid>
+      <description>&lt;p&gt;Gedistribueerde Erlang nodes zijn ook mogelijk in Docker.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Elixir voor de Erlang VM</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/elixir/</link>
+      <pubDate>Fri, 14 Oct 2016 13:50:00 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/elixir/</guid>
+      <description>&lt;p&gt;De programmeertaal &lt;em&gt;Elixir&lt;/em&gt; is modernere taal voor de Erlang VM.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rebar3</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/rebar3/</link>
+      <pubDate>Fri, 23 Sep 2016 14:03:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/rebar3/</guid>
+      <description>&lt;p&gt;De buildtool &lt;code&gt;rebar3&lt;/code&gt; is de opvolger van &lt;code&gt;rebar&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nieuwe versie Idea 2016 2.4</title>
+      <link>http://eaict.technologiecampusdiepenbeek.be/post/idea-2016.2.4/</link>
+      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
+      
+      <guid>http://eaict.technologiecampusdiepenbeek.be/post/idea-2016.2.4/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Idea 2016 2.4&lt;/em&gt; is geïnstalleerd op &lt;literal&gt;afss1&lt;/literal&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
