@@ -12,16 +12,16 @@
   
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
 
-  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+  <link rel="alternate" href="https://lrutten.github.io/index.xml" type="application/rss+xml" title="lrutten">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/main.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/pygment_highlights.css" />
   
   
   <meta property="og:title" content="Erlang nodes in Docker" />
@@ -45,7 +45,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+      <a class="navbar-brand" href="https://lrutten.github.io/">lrutten</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -113,27 +113,22 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
           <p>Gedistribueerde Erlang nodes zijn ook mogelijk in Docker.</p>
-
 <p>Eigenlijk is Docker helemaal niet nodig als je gedistribueerde Erlang nodes wil maken.
 Een Erlang node is al een soort container op zich. Maar met de komst van Docker Swarm
 zou het wel eens interessant kunnen zijn om de Erlang nodes binnen Docker containers te draaien.</p>
-
 <p>Als je een gedistribueerde Erlang applicatie wil uitbaten dan is Docker Swarm een goed
 hulpmiddel. Elke Erlang node draait dan binnen zijn eigen Docker container en elke
 Docker container plaatsen we op één Docker node. Deze architectuur heb je nodig als je
 rekenintensieve Erlang applicaties maakt. Een goed voorbeeld zijn de mierenkoloniealgoritmes.</p>
-
 <p>In deze post is alleen maar getest of je een Erlang <code>ping</code> kan uitvoeren tussen twee
 Erlang nodes die elk een eigen container draaien. Beide containers draaien op dezelfde host.
 Voor deze test is een recente Docker versie nodig omdat er <code>docker network</code> wordt gebruikt.
 Met dit commando kan je eigen virtuele netwerken beheren. Deze netwerken maken de koppeling
 tussen containers toe.</p>
-
 <p>Na enige testen is het gelukt om in Docker Erlang gedistribueerde nodes met elkaar te koppelen.
 Elke node draait in een eigen Docker container. De volgende
 <a href="https://gist.github.com/lrutten/c13b7124d63fb1e4dd7fa6b8e994dbe6">Dockerfile</a>
 maakt de image.</p>
-
 <pre><code>FROM erlang:19.1.6
 
 RUN apt-get update
@@ -142,14 +137,10 @@ RUN apt-get install -y dnsutils
 EXPOSE 4000-50000
 
 CMD [erl]
-</code></pre>
-
-<p>Deze eigen image is nodig. De <code>EXPOSE</code> geeft aan welke poorten binnen deze image toegankelijk moeten zijn.
+</code></pre><p>Deze eigen image is nodig. De <code>EXPOSE</code> geeft aan welke poorten binnen deze image toegankelijk moeten zijn.
 De daemon <code>epmd</code> draait op poort <code>4369</code> en elke node krijgt dynamisch een poort toegewezen. Deze poorten
 zijn niet op voorhand bekend, vandaar de range in de <code>EXPOSE</code>.</p>
-
 <p>Alle Docker commando&rsquo;s staan in de volgende <a href="https://gist.github.com/lrutten/e99a8324c21bc6c288c4ae7d4222ce66">Makefile</a>.</p>
-
 <pre><code>build:
 	docker build -t lrutten/erlang .
 
@@ -179,39 +170,22 @@ stop2:
 
 images:
 	docker images
-</code></pre>
-
-<p>Dit is de werkwijze. Bouw de image.</p>
-
+</code></pre><p>Dit is de werkwijze. Bouw de image.</p>
 <pre><code>make build
-</code></pre>
-
-<p>Maak dan een netwerk:</p>
-
+</code></pre><p>Maak dan een netwerk:</p>
 <pre><code>make network-create
-</code></pre>
-
-<p>Je kan dat netwerk bekijken met:</p>
-
+</code></pre><p>Je kan dat netwerk bekijken met:</p>
 <pre><code>make network-ls
-</code></pre>
-
-<p><code>lokaal</code> is de naam van het netwerk.
+</code></pre><p><code>lokaal</code> is de naam van het netwerk.
 Het subnet is dan <code>172.19.0.0/16</code> en de
 gateway is dan <code>172.19.0.1/16</code>.</p>
-
 <p>Het voordeel van een eigen netwerk is dat er dan een eigen DNS server beschikbaar is op adres <code>127.0.0.11</code>.
 De container gekoppeld met dit netwerk kunnen elkaar dan bereiken via de domeinnaam.
 De DNS server kan je testen met <code>dig</code>.</p>
-
 <p>Start de twee containers:</p>
-
 <pre><code>make erl1
 make erl2
-</code></pre>
-
-<p>Deze containers werken dan interactief. In één van beide start je het <code>ping</code> commando:</p>
-
+</code></pre><p>Deze containers werken dan interactief. In één van beide start je het <code>ping</code> commando:</p>
 <pre><code>Erlang/OTP 19 [erts-8.1.1] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false]
 
 Eshell V8.1.1  (abort with ^G)
@@ -219,21 +193,15 @@ Eshell V8.1.1  (abort with ^G)
 pong
 (huis1@huis1.straat.org)2&gt; nodes().
 ['huis2@huis2.straat.org']
-</code></pre>
-
-<p>In de andere container zie je dan de <code>nodes()</code>.</p>
-
+</code></pre><p>In de andere container zie je dan de <code>nodes()</code>.</p>
 <pre><code>Erlang/OTP 19 [erts-8.1.1] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false]
 
 Eshell V8.1.1  (abort with ^G)
 (huis2@huis2.straat.org)1&gt; nodes().
 ['huis1@huis1.straat.org']
 (huis2@huis2.straat.org)2&gt; 
-</code></pre>
-
-<p>Door het gebruik van de <code>Makefile</code> heof je niet al die <code>docker run</code> parameters te onthouden.
+</code></pre><p>Door het gebruik van de <code>Makefile</code> heof je niet al die <code>docker run</code> parameters te onthouden.
 Voor alle duidelijkheid worden ze hier opgesomd:</p>
-
 <ul>
 <li><code>--name huis1</code> dit is de naam van de container</li>
 <li><code>-it</code> de container werkt iteratief</li>
@@ -245,20 +213,14 @@ Voor alle duidelijkheid worden ze hier opgesomd:</p>
 <li><code>lrutten/erlang</code> de gebruikte image</li>
 <li><code>erl -name huis1@huis1.straat.org -setcookie abc</code> de start van de Erlang node, dat kan ook <code>/bin/bash</code> zijn.</li>
 </ul>
-
 <p>In de container ziet <code>/etc/resolv.conf</code> er dan zo uit:</p>
-
 <pre><code>search straat.org
 nameserver 127.0.0.11
 options ndots:0
-</code></pre>
-
-<p>Het bestand <code>/etc/resolv.conf</code> heeft zijn eigen mount en komt niet uit de image.
+</code></pre><p>Het bestand <code>/etc/resolv.conf</code> heeft zijn eigen mount en komt niet uit de image.
 Zo kan je elke container andere instellingen geven ook al werk je met dezelfde image.
 Dit geldt ook voor <code>/etc/hostname</code> en <code>/etc/hosts</code>.</p>
-
 <p>Deze links zijn nuttig:</p>
-
 <ul>
 <li><a href="https://docs.docker.com/engine/userguide/networking/">https://docs.docker.com/engine/userguide/networking/</a></li>
 <li><a href="https://docs.docker.com/engine/swarm/">https://docs.docker.com/engine/swarm/</a></li>
@@ -270,12 +232,12 @@ Dit geldt ook voor <code>/etc/hostname</code> en <code>/etc/hosts</code>.</p>
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/wt-in-docker/" data-toggle="tooltip" data-placement="top" title="Een Wt voorbeeld in Docker">&larr; Vorige post</a>
+          <a href="https://lrutten.github.io/post/wt-in-docker/" data-toggle="tooltip" data-placement="top" title="Een Wt voorbeeld in Docker">&larr; Vorige post</a>
         </li>
         
         
         <li class="next">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/cpp-functor/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; Functors en lambdafuncties">Volgende post &rarr;</a>
+          <a href="https://lrutten.github.io/post/cpp-functor/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; Functors en lambdafuncties">Volgende post &rarr;</a>
         </li>
         
       </ul>
@@ -305,7 +267,7 @@ Dit geldt ook voor <code>/etc/hostname</code> en <code>/etc/hosts</code>.</p>
           
 
     		  <li>
-      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			<a href="https://lrutten.github.io/index.xml" title="RSS">
       			  <span class="fa-stack fa-lg">
         				<i class="fa fa-circle fa-stack-2x"></i>
         				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -321,7 +283,7 @@ Dit geldt ook voor <code>/etc/hostname</code> en <code>/etc/hosts</code>.</p>
     		  
     		  
     		  &nbsp;&bull;&nbsp;
-    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  <a href="https://lrutten.github.io/">lrutten</a>
     		  
   	    </p>
   	        
@@ -334,23 +296,10 @@ Dit geldt ook voor <code>/etc/hostname</code> en <code>/etc/hosts</code>.</p>
   </div>
 </footer>
 
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+<script src="https://lrutten.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://lrutten.github.io/js/bootstrap.min.js"></script>
+<script src="https://lrutten.github.io/js/main.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-92842352-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
 
   </body>

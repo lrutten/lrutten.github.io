@@ -12,16 +12,16 @@
   
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
 
-  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+  <link rel="alternate" href="https://lrutten.github.io/index.xml" type="application/rss+xml" title="lrutten">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/main.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/pygment_highlights.css" />
   
   
   <meta property="og:title" content="Spark Framework demo in Kotlin" />
@@ -45,7 +45,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+      <a class="navbar-brand" href="https://lrutten.github.io/">lrutten</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -113,12 +113,10 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
           <p>Het Spark micro framework kan je ook in Kotlin programmeren.</p>
-
 <p>Dit framework is oorspronkelijk bedoeld voor Java 8. In deze versie
 van Java werden de lambdafuncties geïntroduceerd en juist dat is ook een
 kenmerk van Kotlin. De volgende Kotlin <code>Main.kt</code> code toont een Spark controller
 die de nodige routing verzorgt.</p>
-
 <pre><code>package com.mmk
 
 import com.google.gson.Gson
@@ -155,15 +153,11 @@ class Main
       })
    }
 }
-</code></pre>
-
-<p>De <code>Main</code> klasse heeft een <code>run()</code> methode waarin met <code>get()</code> oproepen de verschillende routes
+</code></pre><p>De <code>Main</code> klasse heeft een <code>run()</code> methode waarin met <code>get()</code> oproepen de verschillende routes
 gedefiniëerd worden. In de URL syntax kan je ook variabelen plaatsen, bijvoorbeeld <code>&quot;/hello/:fname/:lname&quot;</code>.
 In elke route wordt met een lambdafunctie aangegeven wat de respons voor de aanvraag is.
 Bij de derde route wordt JSON teruggegeven.</p>
-
 <p>De volgende <code>build.gradle</code> beschrijft alle afhankelijkheden voor de compilatie.</p>
-
 <pre><code>buildscript {
    ext.kotlin_version='1.0.1'
    ext.gson_version='2.6.2'
@@ -196,15 +190,9 @@ dependencies {
    testCompile 'junit:junit:4.11'
    testCompile &quot;org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version&quot;
 }
-</code></pre>
-
-<p>Je kan het voorbeeld starten met:</p>
-
+</code></pre><p>Je kan het voorbeeld starten met:</p>
 <pre><code>gradle run
-</code></pre>
-
-<p>Deze URL&rsquo;s kan je dan uitproberen.</p>
-
+</code></pre><p>Deze URL&rsquo;s kan je dan uitproberen.</p>
 <pre><code>http://localhost:4567/hello
 http://localhost:4567/hello/jan
 http://localhost:4567/hello/jan/jansen
@@ -214,12 +202,12 @@ http://localhost:4567/hello/jan/jansen
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/astudio2/" data-toggle="tooltip" data-placement="top" title="Android Studio 2.0">&larr; Vorige post</a>
+          <a href="https://lrutten.github.io/post/astudio2/" data-toggle="tooltip" data-placement="top" title="Android Studio 2.0">&larr; Vorige post</a>
         </li>
         
         
         <li class="next">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/arduino-primo/" data-toggle="tooltip" data-placement="top" title="Aankondiging Arduino Primo">Volgende post &rarr;</a>
+          <a href="https://lrutten.github.io/post/arduino-primo/" data-toggle="tooltip" data-placement="top" title="Aankondiging Arduino Primo">Volgende post &rarr;</a>
         </li>
         
       </ul>
@@ -249,7 +237,7 @@ http://localhost:4567/hello/jan/jansen
           
 
     		  <li>
-      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			<a href="https://lrutten.github.io/index.xml" title="RSS">
       			  <span class="fa-stack fa-lg">
         				<i class="fa fa-circle fa-stack-2x"></i>
         				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -265,7 +253,7 @@ http://localhost:4567/hello/jan/jansen
     		  
     		  
     		  &nbsp;&bull;&nbsp;
-    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  <a href="https://lrutten.github.io/">lrutten</a>
     		  
   	    </p>
   	        
@@ -278,23 +266,10 @@ http://localhost:4567/hello/jan/jansen
   </div>
 </footer>
 
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+<script src="https://lrutten.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://lrutten.github.io/js/bootstrap.min.js"></script>
+<script src="https://lrutten.github.io/js/main.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-92842352-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
 
   </body>

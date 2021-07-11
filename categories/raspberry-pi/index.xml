@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raspberry Pi on eaict</title>
-    <link>http://eaict.technologiecampusdiepenbeek.be/categories/raspberry-pi/</link>
-    <description>Recent content in Raspberry Pi on eaict</description>
+    <title>Raspberry Pi on lrutten</title>
+    <link>https://lrutten.github.io/categories/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on lrutten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-BE</language>
-    <lastBuildDate>Fri, 23 Sep 2016 11:00:03 +0100</lastBuildDate>
-    
-	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 23 Sep 2016 11:00:03 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I2C op Raspberry Pi vanuit C</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/i2c-raspberrypi/</link>
+      <link>https://lrutten.github.io/post/i2c-raspberrypi/</link>
       <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/i2c-raspberrypi/</guid>
+      <guid>https://lrutten.github.io/post/i2c-raspberrypi/</guid>
       <description>&lt;p&gt;Vanuit een C programma kan je hardware aanspreken die via de I2C bus
 gekoppeld is met de Raspberry Pi.&lt;/p&gt;</description>
     </item>

@@ -1,292 +1,272 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on eaict</title>
-    <link>http://eaict.technologiecampusdiepenbeek.be/categories/linux/</link>
-    <description>Recent content in Linux on eaict</description>
+    <title>linux on lrutten</title>
+    <link>https://lrutten.github.io/categories/linux/</link>
+    <description>Recent content in linux on lrutten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-BE</language>
-    <lastBuildDate>Thu, 30 Jun 2016 11:00:03 +0100</lastBuildDate>
-    
-	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 30 Jun 2016 11:00:03 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Slackware 14.2 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-2/</link>
+      <link>https://lrutten.github.io/post/slackware-14-2/</link>
       <pubDate>Thu, 30 Jun 2016 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-2/</guid>
-      <description>PulseAudio en VDPAU zijn bijgevoegd en er is overgeschakeld van udev naar eudev en van ConsoleKit naar ConsoleKit2.
-De kernelversie is 4.4.14</description>
+      <guid>https://lrutten.github.io/post/slackware-14-2/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 14.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-1/</link>
+      <link>https://lrutten.github.io/post/slackware-14-1/</link>
       <pubDate>Mon, 04 Nov 2013 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-1/</guid>
-      <description>De UEFI hardware wordt ondersteund.
-De kernelversie is 3.10.17</description>
+      <guid>https://lrutten.github.io/post/slackware-14-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 14.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-0/</link>
+      <link>https://lrutten.github.io/post/slackware-14-0/</link>
       <pubDate>Fri, 28 Sep 2012 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-14-0/</guid>
-      <description>De NetworkManager is bijgevoegd. HAL is geschrapt omdat de funcionaliteit in udev zit.
-De kernelversie is 3.2.29</description>
+      <guid>https://lrutten.github.io/post/slackware-14-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 13.37 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-37/</link>
+      <link>https://lrutten.github.io/post/slackware-13-37/</link>
       <pubDate>Wed, 27 Apr 2011 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-37/</guid>
-      <description>Ondersteuning voor GPT en de utilities voor het Btrfs filesystem zijn er ook.
-De kernelversie is 2.6.37.6</description>
+      <guid>https://lrutten.github.io/post/slackware-13-37/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 13.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-1/</link>
+      <link>https://lrutten.github.io/post/slackware-13-1/</link>
       <pubDate>Mon, 24 May 2010 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-1/</guid>
-      <description>PolicyKit en ConsoleKit zijn bijgevoegd. De schijftoegang is nu met het libata subsystem.
-De kernelversie is 2.6.33.4</description>
+      <guid>https://lrutten.github.io/post/slackware-13-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 13.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-0/</link>
+      <link>https://lrutten.github.io/post/slackware-13-0/</link>
       <pubDate>Wed, 26 Aug 2009 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-13-0/</guid>
-      <description>De 64 bit versie is bijgevoegd en KDE gaat van 3.5 naar 4.x. De pakketten gaan van het gzip formaat naar het xz formaat.
-De kernelversie is 2.6.29.6</description>
+      <guid>https://lrutten.github.io/post/slackware-13-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 12.2 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-2/</link>
+      <link>https://lrutten.github.io/post/slackware-12-2/</link>
       <pubDate>Wed, 10 Dec 2008 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-2/</guid>
-      <description>De kernelversie is 2.6.27.7</description>
+      <guid>https://lrutten.github.io/post/slackware-12-2/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Introductie van de sed streaming editor</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/intro-sed/</link>
+      <link>https://lrutten.github.io/post/intro-sed/</link>
       <pubDate>Fri, 14 Nov 2008 14:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/intro-sed/</guid>
+      <guid>https://lrutten.github.io/post/intro-sed/</guid>
       <description>&lt;p&gt;Het commando &lt;code&gt;sed&lt;/code&gt; is de streaming variant van het interactieve &lt;code&gt;ed&lt;/code&gt;
 commando.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Slackware 12.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-1/</link>
+      <link>https://lrutten.github.io/post/slackware-12-1/</link>
       <pubDate>Fri, 02 May 2008 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-1/</guid>
-      <description>De kernelversie is 2.6.24.5</description>
+      <guid>https://lrutten.github.io/post/slackware-12-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 12.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-0/</link>
+      <link>https://lrutten.github.io/post/slackware-12-0/</link>
       <pubDate>Sun, 01 Jul 2007 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-12-0/</guid>
-      <description>Er is overgeschakeld van Linux 2.4 naar 2.6 en HAL wordt ondersteund. Floppy disk installatie gaat niet meer (behalbe voor PXE).
-De kernelversie is 2.6.21.5</description>
+      <guid>https://lrutten.github.io/post/slackware-12-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 11.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-11-0/</link>
+      <link>https://lrutten.github.io/post/slackware-11-0/</link>
       <pubDate>Mon, 02 Oct 2006 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-11-0/</guid>
-      <description>Dit is de eerste versie op DVD.
-De kernelversie is 2.4.33.3</description>
+      <guid>https://lrutten.github.io/post/slackware-11-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 10.2 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-2/</link>
+      <link>https://lrutten.github.io/post/slackware-10-2/</link>
       <pubDate>Wed, 14 Sep 2005 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-2/</guid>
-      <description>De GNOME desktop omgeving is verwijderd.
-De kernelversie is 2.4.31</description>
+      <guid>https://lrutten.github.io/post/slackware-10-2/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 10.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-1/</link>
+      <link>https://lrutten.github.io/post/slackware-10-1/</link>
       <pubDate>Wed, 02 Feb 2005 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-1/</guid>
-      <description>De kernelversie is 2.4.29</description>
+      <guid>https://lrutten.github.io/post/slackware-10-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 10.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-0/</link>
+      <link>https://lrutten.github.io/post/slackware-10-0/</link>
       <pubDate>Wed, 23 Jun 2004 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-10-0/</guid>
-      <description>Er is overgeschakeld van XFree86 naar X.org Server.
-De kernelversie is 2.4.26</description>
+      <guid>https://lrutten.github.io/post/slackware-10-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 9.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-9-1/</link>
+      <link>https://lrutten.github.io/post/slackware-9-1/</link>
       <pubDate>Fri, 26 Sep 2003 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-9-1/</guid>
-      <description>Er is overgeschakeld van OSS naar ALSA.
-De kernelversie is 2.4.22</description>
+      <guid>https://lrutten.github.io/post/slackware-9-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 9.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-9-0/</link>
+      <link>https://lrutten.github.io/post/slackware-9-0/</link>
       <pubDate>Wed, 19 Mar 2003 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-9-0/</guid>
-      <description>De kernelversie is 2.4.20</description>
+      <guid>https://lrutten.github.io/post/slackware-9-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 8.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-8-1/</link>
+      <link>https://lrutten.github.io/post/slackware-8-1/</link>
       <pubDate>Tue, 18 Jun 2002 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-8-1/</guid>
-      <description>De pakketnamen zijn niet meer in het 8.3 formaat maar wel name-version-arch-build.tgz. hdsetup is nu pkgtools.
-De kernelversie is 2.4.18</description>
+      <guid>https://lrutten.github.io/post/slackware-8-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 8.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-8-0/</link>
+      <link>https://lrutten.github.io/post/slackware-8-0/</link>
       <pubDate>Sun, 01 Jul 2001 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-8-0/</guid>
-      <description>De Mozilla Browser is bijgvoegd en Linux 2.4 is een optie.
-De kernelversie is 2.2.19</description>
+      <guid>https://lrutten.github.io/post/slackware-8-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 7.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-7-1/</link>
+      <link>https://lrutten.github.io/post/slackware-7-1/</link>
       <pubDate>Thu, 22 Jun 2000 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-7-1/</guid>
-      <description>De kernelversie is 2.2.16</description>
+      <guid>https://lrutten.github.io/post/slackware-7-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 7.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-7-0/</link>
+      <link>https://lrutten.github.io/post/slackware-7-0/</link>
       <pubDate>Mon, 25 Oct 1999 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-7-0/</guid>
-      <description>De kernelversie is 2.2.13</description>
+      <guid>https://lrutten.github.io/post/slackware-7-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 4.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-4-0/</link>
+      <link>https://lrutten.github.io/post/slackware-4-0/</link>
       <pubDate>Mon, 17 May 1999 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-4-0/</guid>
-      <description>De kernelversie is 2.2.6</description>
+      <guid>https://lrutten.github.io/post/slackware-4-0/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.9 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-9/</link>
+      <link>https://lrutten.github.io/post/slackware-3-9/</link>
       <pubDate>Mon, 10 May 1999 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-9/</guid>
-      <description>De kernelversie is 2.0.37pre10</description>
+      <guid>https://lrutten.github.io/post/slackware-3-9/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.6 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-6/</link>
+      <link>https://lrutten.github.io/post/slackware-3-6/</link>
       <pubDate>Wed, 28 Oct 1998 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-6/</guid>
-      <description>De kernelversie is 2.0.35</description>
+      <guid>https://lrutten.github.io/post/slackware-3-6/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.5 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-5/</link>
+      <link>https://lrutten.github.io/post/slackware-3-5/</link>
       <pubDate>Tue, 09 Jun 1998 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-5/</guid>
-      <description>De kernelversie is 2.0.34</description>
+      <guid>https://lrutten.github.io/post/slackware-3-5/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.4 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-4/</link>
+      <link>https://lrutten.github.io/post/slackware-3-4/</link>
       <pubDate>Tue, 14 Oct 1997 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-4/</guid>
-      <description>Hier wordt ZipSlack geïntroduceerd.
-De kernelversie is 2.0.30</description>
+      <guid>https://lrutten.github.io/post/slackware-3-4/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.3 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-3/</link>
+      <link>https://lrutten.github.io/post/slackware-3-3/</link>
       <pubDate>Wed, 11 Jun 1997 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-3/</guid>
-      <description>De kernelversie is 2.0.30</description>
+      <guid>https://lrutten.github.io/post/slackware-3-3/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.2 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-2/</link>
+      <link>https://lrutten.github.io/post/slackware-3-2/</link>
       <pubDate>Mon, 17 Feb 1997 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-2/</guid>
-      <description>De kernelversie is 2.0.29</description>
+      <guid>https://lrutten.github.io/post/slackware-3-2/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.1 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-1/</link>
+      <link>https://lrutten.github.io/post/slackware-3-1/</link>
       <pubDate>Mon, 03 Jun 1996 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-1/</guid>
-      <description>Deze versie heette ook Slackware 96, een allusie op Windows 95
-De kernelversie is 2.0.0</description>
+      <guid>https://lrutten.github.io/post/slackware-3-1/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Slackware 3.0 is er</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-0/</link>
+      <link>https://lrutten.github.io/post/slackware-3-0/</link>
       <pubDate>Thu, 30 Nov 1995 11:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/slackware-3-0/</guid>
-      <description>In deze versie wordt nu niet meer het a.out formaat gebruikt maar wel Executable and Linkable Format (ELF). Dit is ook de eerste versie op CD-ROM.
-De kernelversie is 1.2.13</description>
+      <guid>https://lrutten.github.io/post/slackware-3-0/</guid>
+      <description></description>
     </item>
     
   </channel>

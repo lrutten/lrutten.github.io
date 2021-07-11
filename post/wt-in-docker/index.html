@@ -12,16 +12,16 @@
   
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
 
-  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+  <link rel="alternate" href="https://lrutten.github.io/index.xml" type="application/rss+xml" title="lrutten">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/main.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/pygment_highlights.css" />
   
   
   <meta property="og:title" content="Een Wt voorbeeld in Docker" />
@@ -45,7 +45,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+      <a class="navbar-brand" href="https://lrutten.github.io/">lrutten</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -113,7 +113,6 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
           <p><em>Wt</em> werkt ook in een Docker container.</p>
-
 <p>Dit is een voorbeeld dat ook al in een vorig bericht
 gepresenteerd is. Het is een simpel C++ Wt voorbeeld dat een
 veelhoek tekent in een canvas. Door gebruik te maken van
@@ -122,29 +121,22 @@ te ontwerpen. Door de applicatie binnen een Docker container te starten
 heb je de werkomgeving voor de applicatie zelf in de hand. We laten Docker
 zelf de C++ compilatie uitvoeren zodat de applicatie als een gewoon programma
 kan gestart worden. In tegenstelling tot Java of Erlang heb je geen runtime nodig.</p>
-
 <p>Het project bestaat uit een
 beperkt aantal bestanden en is zo gestructureerd:</p>
-
 <pre><code>.
 |-- Dockerfile
 |-- Makefile
 `-- veelhoek
     |-- CMakeLists.txt
     `-- veelhoek.cpp
-</code></pre>
-
-<p>Dit zijn de bestanden:</p>
-
+</code></pre><p>Dit zijn de bestanden:</p>
 <ul>
 <li>De <code>Dockerfile</code> beschrijft hoe de Docker image kan gebouwd worden.</li>
 <li>De <code>Makefile</code> geeft aan welke <code>docker</code> commando&rsquo;s je moet beheersen voor dit project.</li>
 <li>De C++ broncode staat in <code>veelhoek.cpp</code>.</li>
 <li>Het tekstbestand <code>CMakeLists</code> geeft aan hoe de applicatie kan gebouwd worden met <code>cmake</code>.</li>
 </ul>
-
 <p>Dit is de broncode van de webapp:</p>
-
 <pre><code>#include &lt;Wt/WApplication&gt;
 #include &lt;Wt/WContainerWidget&gt;
 #include &lt;Wt/WPaintDevice&gt;
@@ -221,11 +213,8 @@ int main(int argc, char **argv)
 {
    return Wt::WRun(argc, argv, &amp;createApplication);
 }
-</code></pre>
-
-<p>De broncode hebben we al gezien in een ander bericht en wordt hier niet verder
+</code></pre><p>De broncode hebben we al gezien in een ander bericht en wordt hier niet verder
 uitgelegd. Om het project te compileren met <code>cmake</code> is deze beschrijving nodig:</p>
-
 <pre><code>INCLUDE_DIRECTORIES(/usr/local/wt/include)
 #LINK_DIRECTORIES(/usr/local/lib)
 
@@ -244,11 +233,8 @@ SET(CMAKE_CXX_FLAGS &quot;${CMAKE_CXX_FLAGS} -Wall -std=c++11&quot;)
 TARGET_LINK_LIBRARIES(veelhoek
   wthttp wt pthread
 )
-</code></pre>
-
-<p>Met deze <code>Dockerfile</code> kan je een Docker image maken waarin een
+</code></pre><p>Met deze <code>Dockerfile</code> kan je een Docker image maken waarin een
 Wt webapplicatie draait.</p>
-
 <pre><code>FROM ubuntu:14.04
 MAINTAINER Leo Rutten &quot;leo.rutten@kuleuven.be&quot;
 RUN apt-get update
@@ -262,70 +248,39 @@ RUN cmake .
 RUN make
 CMD [&quot;/veelhoek/veelhoek&quot;, &quot;--http-address=0.0.0.0&quot;, &quot;--http-port=80&quot;, &quot;--docroot=/veelhoek&quot;]
 EXPOSE 80
-</code></pre>
-
-<p>De <code>Dockerfile</code> bestaat uit een aantal stappen die één voor één uitgevoerd worden
+</code></pre><p>De <code>Dockerfile</code> bestaat uit een aantal stappen die één voor één uitgevoerd worden
 bij het aanmaken van de image. Als basis voor de image wordt <code>ubuntu:14.04</code> gebruikt.</p>
-
 <pre><code>FROM ubuntu:14.04
-</code></pre>
-
-<p>Vervolgens worden met <code>apt-get</code> de nodige pakketten geïnstalleerd.
+</code></pre><p>Vervolgens worden met <code>apt-get</code> de nodige pakketten geïnstalleerd.
 De eerste <code>install</code> doet een aantal <code>witty</code> installaties. Dit is Wt
 die geïnstalleerd wordt.</p>
-
 <pre><code>RUN apt-get update
 RUN apt-get install -y witty witty-dev witty-doc witty-dbg witty-examples
-</code></pre>
-
-<p>Met <code>build-essental</code> worden de <code>g++</code> compiler en andere tools geïnstalleerd
+</code></pre><p>Met <code>build-essental</code> worden de <code>g++</code> compiler en andere tools geïnstalleerd
 En <code>cmake</code> hebben we ook nodig.</p>
-
 <pre><code>RUN apt-get install -y build-essential
 RUN apt-get install -y cmake
-</code></pre>
-
-<p>Het eerste Docker commando bouwt de image:</p>
-
+</code></pre><p>Het eerste Docker commando bouwt de image:</p>
 <pre><code>docker build -t wt/wt-veelhoek .
-</code></pre>
-
-<p>Dit commando leest de <code>Dockerfile</code> en voert alle commando&rsquo;s
+</code></pre><p>Dit commando leest de <code>Dockerfile</code> en voert alle commando&rsquo;s
 uit. Met volgende commando kan de container gestart worden.</p>
-
 <pre><code>docker run -d --name veelhoek -p 80:80 wt/wt-veelhoek
-</code></pre>
-
-<p>De container draait in de achtergrond als een <em>daemon</em>, vandaar de <code>-d</code> optie.
+</code></pre><p>De container draait in de achtergrond als een <em>daemon</em>, vandaar de <code>-d</code> optie.
 De container krijgt ook een naam met <code>--name veelhoek</code>. Vermits de webapp in de container
 op poort 80 wacht, maken we deze poort ook toegankelijk van buiten de container.
 Dit betekent dat met <code>localhost</code> in de browser de veelhoek getoond wordt.</p>
-
 <p>Je kan nagaan of de container draait:</p>
-
 <pre><code>$ docker ps -a
 CONTAINER ID  IMAGE           COMMAND                CREATED       STATUS       PORTS                NAMES
 7dd202afb4b6  wt/wt-veelhoek  &quot;/veelhoek/veelhoek -&quot; 2 seconds ago Up 1 seconds 127.0.0.1:80-&gt;80/tcp veelhoek
-</code></pre>
-
-<p>Vermits de container in de achtergrond draait, is de consoleout niet meteen zichtbaar.
+</code></pre><p>Vermits de container in de achtergrond draait, is de consoleout niet meteen zichtbaar.
 Je kan die zo bekijken:</p>
-
 <pre><code>docker logs veelhoek
-</code></pre>
-
-<p>Het stopzetten gebeurt zo:</p>
-
+</code></pre><p>Het stopzetten gebeurt zo:</p>
 <pre><code>docker stop veelhoek
-</code></pre>
-
-<p>En tot slot kan je de container na gebruik verwijderen.</p>
-
+</code></pre><p>En tot slot kan je de container na gebruik verwijderen.</p>
 <pre><code>docker rm veelhoek
-</code></pre>
-
-<p>De volgende <code>Makefile</code> is handig om alle commando&rsquo;s te onthouden.</p>
-
+</code></pre><p>De volgende <code>Makefile</code> is handig om alle commando&rsquo;s te onthouden.</p>
 <pre><code>build:
         docker build -t wt/wt-veelhoek .
 
@@ -348,18 +303,13 @@ ps:
 
 rm:
         docker rm veelhoek
-</code></pre>
-
-<p>Er zijn hierboven nog twee doelen die nog een verklaring vragen.</p>
-
+</code></pre><p>Er zijn hierboven nog twee doelen die nog een verklaring vragen.</p>
 <ul>
 <li><code>make runbash</code> start de container zonder de webapp te starten.
 Je start dan wel <code>bash</code> in de plaats. Hiermee kan je de container manueel controleren.</li>
 <li><code>make bash</code> start <code>bash</code> bij een container waarin de webapp gestart is.
-Zo kan je de webapp controleren.
-<br /></li>
+Zo kan je de webapp controleren.</li>
 </ul>
-
 <p>Een volgende stap bij dit voorbeeld is de uitbating bij een cloudprovider.
 En dat is voor een volgend bericht.</p>
       </article>
@@ -367,12 +317,12 @@ En dat is voor een volgend bericht.</p>
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/docker-dart/" data-toggle="tooltip" data-placement="top" title="Een Dart webserver voorbeeld in Docker">&larr; Vorige post</a>
+          <a href="https://lrutten.github.io/post/docker-dart/" data-toggle="tooltip" data-placement="top" title="Een Dart webserver voorbeeld in Docker">&larr; Vorige post</a>
         </li>
         
         
         <li class="next">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/erlang-nodes-in-docker/" data-toggle="tooltip" data-placement="top" title="Erlang nodes in Docker">Volgende post &rarr;</a>
+          <a href="https://lrutten.github.io/post/erlang-nodes-in-docker/" data-toggle="tooltip" data-placement="top" title="Erlang nodes in Docker">Volgende post &rarr;</a>
         </li>
         
       </ul>
@@ -402,7 +352,7 @@ En dat is voor een volgend bericht.</p>
           
 
     		  <li>
-      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			<a href="https://lrutten.github.io/index.xml" title="RSS">
       			  <span class="fa-stack fa-lg">
         				<i class="fa fa-circle fa-stack-2x"></i>
         				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -418,7 +368,7 @@ En dat is voor een volgend bericht.</p>
     		  
     		  
     		  &nbsp;&bull;&nbsp;
-    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  <a href="https://lrutten.github.io/">lrutten</a>
     		  
   	    </p>
   	        
@@ -431,23 +381,10 @@ En dat is voor een volgend bericht.</p>
   </div>
 </footer>
 
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+<script src="https://lrutten.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://lrutten.github.io/js/bootstrap.min.js"></script>
+<script src="https://lrutten.github.io/js/main.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-92842352-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
 
   </body>

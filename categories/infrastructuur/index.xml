@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Infrastructuur on eaict</title>
-    <link>http://eaict.technologiecampusdiepenbeek.be/categories/infrastructuur/</link>
-    <description>Recent content in Infrastructuur on eaict</description>
+    <title>infrastructuur on lrutten</title>
+    <link>https://lrutten.github.io/categories/infrastructuur/</link>
+    <description>Recent content in infrastructuur on lrutten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-BE</language>
-    <lastBuildDate>Thu, 10 Nov 2016 17:00:03 +0100</lastBuildDate>
-    
-	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/categories/infrastructuur/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 10 Nov 2016 17:00:03 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/categories/infrastructuur/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Start eaict blog</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/start-blog/</link>
+      <link>https://lrutten.github.io/post/start-blog/</link>
       <pubDate>Thu, 10 Nov 2016 17:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/start-blog/</guid>
+      <guid>https://lrutten.github.io/post/start-blog/</guid>
       <description>&lt;p&gt;Dit is de start van de &lt;em&gt;eaict&lt;/em&gt; blog. Deze blog meldt tips en beperkt nieuws
 over programmeertalen, Linux en aanverwante thema&amp;rsquo;s.&lt;/p&gt;</description>
     </item>

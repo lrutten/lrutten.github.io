@@ -12,16 +12,16 @@
   
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
 
-  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+  <link rel="alternate" href="https://lrutten.github.io/index.xml" type="application/rss+xml" title="lrutten">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/main.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/pygment_highlights.css" />
   
   
   <meta property="og:title" content="Struct en gelinkte lijst in C" />
@@ -45,7 +45,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+      <a class="navbar-brand" href="https://lrutten.github.io/">lrutten</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -114,39 +114,28 @@
       <article role="main" class="blog-post">
           <p>Enkele mindere bekende constructies zijn <code>struct</code> en de gelinkte lijst die
 met <code>struct</code> gebouwd wordt.</p>
-
 <p>Dit is enkele voorbeelden dat het gebruik van de C <code>struct</code> uitlegt.
 De <code>struct</code> hoef je in praktijk niet meer te gebruiken omdat de C++ <code>class</code> een beter
 alternatief is.</p>
-
 <h2 id="de-struct-in-c">De <code>struct</code> in C</h2>
-
 <p>Dit is een zeer eenvoudig voorbeeld:</p>
-
 <pre><code>struct persoon
 {
    char naam[30];
    int nummer;
 };
-</code></pre>
-
-<p>Een C <code>struct</code> lijkt op een C++ <code>class</code> maar heeft beperkingen.
+</code></pre><p>Een C <code>struct</code> lijkt op een C++ <code>class</code> maar heeft beperkingen.
 Methoden zijn niet toegelaten omdat die niet bestaan in C. En alle datavelden zijn
 public omdat er in C geen beveiligingen mogelijk zijn.</p>
-
 <h2 id="de-gelinkte-lijst-in-c">De gelinkte lijst in C</h2>
-
 <p>Het eerste voorbeeld toont hoe je een gelinkte lijst kan maken met <code>struct</code>.
 Het nadeel van deze oplossing is dat je in de <code>struct</code> een pointer moet voorzien
 die naar het volgende element wijst. In C was dit de enige manier om dynamisch gelinkte lijsten
 te kunnen maken.</p>
-
 <ul>
 <li><code>linked-list.c</code></li>
 </ul>
-
 <p>Broncode: <a href="https://gist.github.com/lrutten/34f9a37e25f9f78c0f198287736908d4">linked-list.c</a></p>
-
 <pre><code>#include &lt;stdlib.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -212,12 +201,9 @@ int main()
 
   // Het vrijgeven met free() ontbreekt nog
 }
-</code></pre>
-
-<p>In het voorbeeld wordt de lijst met dynamisch gereserveerde <code>struct</code>&rsquo;s expliciet aan elkaar geregen.
+</code></pre><p>In het voorbeeld wordt de lijst met dynamisch gereserveerde <code>struct</code>&rsquo;s expliciet aan elkaar geregen.
 Normaal gezien maken we daarvoor een functie. Deze functie kan een nieuw element aan het begin van de lijst bijvoegen.
 Dit is de snelst werkende oplossing; je hoeft hiervoor niet naar het einde van de lijst te lopen.</p>
-
 <p>Een groot nadeel van de gelinkte lijst in C is dat je voor elk type een nieuwe implementatie moet maken.
 Daarom is het beter om <code>vector&lt;int&gt;</code> of <code>list&lt;int&gt;</code> te gebruiken; hier kan je het inhoudstype naar believen kiezen bij de
 declaratie van de lijst. Dit betekent dan ook dat we dan niet in C maar wel in C++ programmeren.</p>
@@ -226,12 +212,12 @@ declaratie van de lijst. Dit betekent dan ook dat we dan niet in C maar wel in C
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/labo-lambda/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43;11 Lambdafuncties">&larr; Vorige post</a>
+          <a href="https://lrutten.github.io/post/labo-lambda/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43;11 Lambdafuncties">&larr; Vorige post</a>
         </li>
         
         
         <li class="next">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/labo-algo-array-vector/" data-toggle="tooltip" data-placement="top" title="STL algoritmen met C array en C&#43;&#43; vector">Volgende post &rarr;</a>
+          <a href="https://lrutten.github.io/post/labo-algo-array-vector/" data-toggle="tooltip" data-placement="top" title="STL algoritmen met C array en C&#43;&#43; vector">Volgende post &rarr;</a>
         </li>
         
       </ul>
@@ -261,7 +247,7 @@ declaratie van de lijst. Dit betekent dan ook dat we dan niet in C maar wel in C
           
 
     		  <li>
-      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			<a href="https://lrutten.github.io/index.xml" title="RSS">
       			  <span class="fa-stack fa-lg">
         				<i class="fa fa-circle fa-stack-2x"></i>
         				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -277,7 +263,7 @@ declaratie van de lijst. Dit betekent dan ook dat we dan niet in C maar wel in C
     		  
     		  
     		  &nbsp;&bull;&nbsp;
-    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  <a href="https://lrutten.github.io/">lrutten</a>
     		  
   	    </p>
   	        
@@ -290,23 +276,10 @@ declaratie van de lijst. Dit betekent dan ook dat we dan niet in C maar wel in C
   </div>
 </footer>
 
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+<script src="https://lrutten.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://lrutten.github.io/js/bootstrap.min.js"></script>
+<script src="https://lrutten.github.io/js/main.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-92842352-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
 
   </body>

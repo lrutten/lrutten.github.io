@@ -12,16 +12,16 @@
   
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
 
-  <link rel="alternate" href="http://eaict.technologiecampusdiepenbeek.be/index.xml" type="application/rss+xml" title="eaict">
+  <link rel="alternate" href="https://lrutten.github.io/index.xml" type="application/rss+xml" title="lrutten">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/main.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/main.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="http://eaict.technologiecampusdiepenbeek.be/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://lrutten.github.io/css/pygment_highlights.css" />
   
   
   <meta property="og:title" content="Een eerste Wt voorbeeld in C&#43;&#43;" />
@@ -45,7 +45,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+      <a class="navbar-brand" href="https://lrutten.github.io/">lrutten</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -113,31 +113,24 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
           <p><em>Wt</em> is een klein C++ webframework dat veel gelijkenissen vertoont met Qt.</p>
-
 <p>Door de gelijkenis met <em>Qt</em> is het relatief eenvoudig om een <em>Qt</em> programma te herwerken
 tot een <em>Wt</em> webapplicatie. Wanneer je die start, kan je het programma weergeven door
 in de browser <code>localhost:8080</code> als adres in te typen.</p>
-
 <p>Hier is een eerste voorbeeld. Dit voorbeeld toont een driehoek in het browservenster.
 Met dit voorbeeld wordt aangetoond dat het mogelijk is om met <em>Wt</em> grafische output weer te geven.
 Wt voorziet 3 mogelijkheden om grafische output weer te geven.</p>
-
 <ul>
 <li>inline SVG/InlineSvgVml</li>
 <li>HTML canvas</li>
 <li>Png</li>
 </ul>
-
 <p>In het eerste geval wordt inline SVG gegenereerd. Dit betekent dat de SVG elementen rechtstreeks
 in het HTML bestand geplaatst worden. In het tweede geval wordt er getekend in een HTML canvas. Nu gebeurt
 het tekenwerk met gegenereerde Javascript. In het derde geval wordt de tekening als een png gegenereerd
 aan de serverzijde, in het C++ programma. De belangrijkste factor die de keuze zal bepalen, is de rekentijd.
 Alleen bij png is dat serverzijde, bij SVG en canvas is dat clientzijde. Hierbij zal SVG trager zijn dan canvas.</p>
-
 <p>Dit is het voorbeeld.</p>
-
 <p>Broncode: <a href="https://gist.github.com/lrutten/6f1ed17f4dd0e1415f0cfa0873e6f18e">veelhoek.cpp</a></p>
-
 <pre><code>#include &lt;Wt/WApplication&gt;
 #include &lt;Wt/WContainerWidget&gt;
 #include &lt;Wt/WPaintDevice&gt;
@@ -214,17 +207,12 @@ int main(int argc, char **argv)
 {
    return Wt::WRun(argc, argv, &amp;createApplication);
 }
-</code></pre>
-
-<p>In dit minimale voorbeeld zie je de volgend klassen:</p>
-
+</code></pre><p>In dit minimale voorbeeld zie je de volgend klassen:</p>
 <ul>
 <li><code>VeelhoekApplication</code>: deze klasse stelt de applicatie voor.</li>
 <li><code>VeelhoekWidget</code>: dit is een  vensterklasse.</li>
 </ul>
-
 <p>Voor de compilatie zorgt de volgende <code>Makefile</code></p>
-
 <pre><code>veelhoek: veelhoek.cpp
 	g++ -std=c++11 -o veelhoek veelhoek.cpp -lwt -lwthttp
 
@@ -239,12 +227,12 @@ clean:
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/elixir/" data-toggle="tooltip" data-placement="top" title="Elixir voor de Erlang VM">&larr; Vorige post</a>
+          <a href="https://lrutten.github.io/post/elixir/" data-toggle="tooltip" data-placement="top" title="Elixir voor de Erlang VM">&larr; Vorige post</a>
         </li>
         
         
         <li class="next">
-          <a href="http://eaict.technologiecampusdiepenbeek.be/post/lab-concurrency/" data-toggle="tooltip" data-placement="top" title="Labo C&#43;&#43;11 concurrency">Volgende post &rarr;</a>
+          <a href="https://lrutten.github.io/post/lab-concurrency/" data-toggle="tooltip" data-placement="top" title="Labo C&#43;&#43;11 concurrency">Volgende post &rarr;</a>
         </li>
         
       </ul>
@@ -274,7 +262,7 @@ clean:
           
 
     		  <li>
-      			<a href="http://eaict.technologiecampusdiepenbeek.be/index.xml" title="RSS">
+      			<a href="https://lrutten.github.io/index.xml" title="RSS">
       			  <span class="fa-stack fa-lg">
         				<i class="fa fa-circle fa-stack-2x"></i>
         				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -290,7 +278,7 @@ clean:
     		  
     		  
     		  &nbsp;&bull;&nbsp;
-    		  <a href="http://eaict.technologiecampusdiepenbeek.be/">eaict</a>
+    		  <a href="https://lrutten.github.io/">lrutten</a>
     		  
   	    </p>
   	        
@@ -303,23 +291,10 @@ clean:
   </div>
 </footer>
 
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/jquery-1.11.2.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/bootstrap.min.js"></script>
-<script src="http://eaict.technologiecampusdiepenbeek.be/js/main.js"></script>
+<script src="https://lrutten.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="https://lrutten.github.io/js/bootstrap.min.js"></script>
+<script src="https://lrutten.github.io/js/main.js"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-92842352-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
 
   </body>

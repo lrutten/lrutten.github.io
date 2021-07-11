@@ -1,84 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on eaict</title>
-    <link>http://eaict.technologiecampusdiepenbeek.be/categories/</link>
-    <description>Recent content in Categories on eaict</description>
+    <title>Categories on lrutten</title>
+    <link>https://lrutten.github.io/categories/</link>
+    <description>Recent content in Categories on lrutten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-BE</language>
-    
-	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Nov 2017 17:49:00 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Distributies</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/distributies/</link>
-      <pubDate>Thu, 30 Jun 2016 11:00:03 +0100</pubDate>
-      
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/distributies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Infrastructuur</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/infrastructuur/</link>
-      <pubDate>Thu, 10 Nov 2016 17:00:03 +0100</pubDate>
-      
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/infrastructuur/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/linux/</link>
-      <pubDate>Thu, 30 Jun 2016 11:00:03 +0100</pubDate>
-      
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programmeertalen</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/programmeertalen/</link>
+      <title>programmeertalen</title>
+      <link>https://lrutten.github.io/categories/programmeertalen/</link>
       <pubDate>Tue, 28 Nov 2017 17:49:00 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/programmeertalen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/raspberry-pi/</link>
-      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
-      
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Single Board Computers</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/single-board-computers/</link>
-      <pubDate>Wed, 18 May 2016 14:00:03 +0100</pubDate>
-      
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/single-board-computers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/tools/</link>
-      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
-      
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/tools/</guid>
+      <guid>https://lrutten.github.io/categories/programmeertalen/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/categories/web/</link>
+      <link>https://lrutten.github.io/categories/web/</link>
       <pubDate>Tue, 29 Nov 2016 18:16:00 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/categories/web/</guid>
+      <guid>https://lrutten.github.io/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infrastructuur</title>
+      <link>https://lrutten.github.io/categories/infrastructuur/</link>
+      <pubDate>Thu, 10 Nov 2016 17:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/categories/infrastructuur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://lrutten.github.io/categories/raspberry-pi/</link>
+      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/categories/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://lrutten.github.io/categories/tools/</link>
+      <pubDate>Fri, 23 Sep 2016 11:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distributies</title>
+      <link>https://lrutten.github.io/categories/distributies/</link>
+      <pubDate>Thu, 30 Jun 2016 11:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/categories/distributies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://lrutten.github.io/categories/linux/</link>
+      <pubDate>Thu, 30 Jun 2016 11:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>single board computers</title>
+      <link>https://lrutten.github.io/categories/single-board-computers/</link>
+      <pubDate>Wed, 18 May 2016 14:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/categories/single-board-computers/</guid>
       <description></description>
     </item>
     

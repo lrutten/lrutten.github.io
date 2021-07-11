@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on eaict</title>
-    <link>http://eaict.technologiecampusdiepenbeek.be/tags/android/</link>
-    <description>Recent content in Android on eaict</description>
+    <title>Android on lrutten</title>
+    <link>https://lrutten.github.io/tags/android/</link>
+    <description>Recent content in Android on lrutten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-BE</language>
-    <lastBuildDate>Thu, 14 Apr 2016 14:03:03 +0100</lastBuildDate>
-    
-	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 14 Apr 2016 14:03:03 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android Studio 2.0</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/astudio2/</link>
+      <link>https://lrutten.github.io/post/astudio2/</link>
       <pubDate>Thu, 14 Apr 2016 14:03:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/astudio2/</guid>
+      <guid>https://lrutten.github.io/post/astudio2/</guid>
       <description>&lt;p&gt;Android Studio 2.0 is geïnstalleerd op de &lt;code&gt;afss1&lt;/code&gt; server.&lt;/p&gt;</description>
     </item>
     

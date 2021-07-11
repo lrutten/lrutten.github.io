@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rtos on eaict</title>
-    <link>http://eaict.technologiecampusdiepenbeek.be/tags/rtos/</link>
-    <description>Recent content in Rtos on eaict</description>
+    <title>RTOS on lrutten</title>
+    <link>https://lrutten.github.io/tags/rtos/</link>
+    <description>Recent content in RTOS on lrutten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-BE</language>
-    <lastBuildDate>Wed, 18 May 2016 14:00:03 +0100</lastBuildDate>
-    
-	<atom:link href="http://eaict.technologiecampusdiepenbeek.be/tags/rtos/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 18 May 2016 14:00:03 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/tags/rtos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aankondiging Arduino Primo</title>
-      <link>http://eaict.technologiecampusdiepenbeek.be/post/arduino-primo/</link>
+      <link>https://lrutten.github.io/post/arduino-primo/</link>
       <pubDate>Wed, 18 May 2016 14:00:03 +0100</pubDate>
       
-      <guid>http://eaict.technologiecampusdiepenbeek.be/post/arduino-primo/</guid>
+      <guid>https://lrutten.github.io/post/arduino-primo/</guid>
       <description>&lt;p&gt;De Arduino Primo is een nieuwe 32 bitter met veel extra ingebouwde periferie.&lt;/p&gt;</description>
     </item>
     
