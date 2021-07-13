@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programminglanguages on lrutten</title>
+    <link>https://lrutten.github.io/categories/programminglanguages/</link>
+    <description>Recent content in programminglanguages on lrutten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Sep 1975 14:00:03 +0100</lastBuildDate><atom:link href="https://lrutten.github.io/categories/programminglanguages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First acquaintance with the PDP8</title>
+      <link>https://lrutten.github.io/posts/pdp8/</link>
+      <pubDate>Sun, 21 Sep 1975 14:00:03 +0100</pubDate>
+      
+      <guid>https://lrutten.github.io/posts/pdp8/</guid>
+      <description>&lt;p&gt;The &lt;em&gt;PDP8&lt;/em&gt; is an excellent choice to learn assembler.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
