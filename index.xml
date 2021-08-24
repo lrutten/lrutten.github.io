@@ -17,6 +17,19 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://lrutten.github.io/proglang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lrutten.github.io/proglang/</guid>
+      <description>C C++ Java  C This is the famous C example:
+#include &amp;lt;stdio.h&amp;gt; int main(int argc, char **argv) { printf(&amp;quot;hello world\n&amp;quot;); } Variables and types Every variable must be declared.
+We starten met een eerste voorbeeld:
+#include &amp;lt;stdio.h&amp;gt; int main() /* a semple program */ { int num; num = 1; printf(&amp;quot;%d is an integer number\n&amp;quot;, num ); return 0; } help() is a simple function.
+#include &amp;lt;stdio.h&amp;gt; void help() { printf(&amp;quot;hier is hulp\n&amp;quot;); } int main() { printf(&amp;quot;ik heb hulp nodig\n&amp;quot;); help(); printf(&amp;quot;dank u&amp;quot;); return 0; } Other types are double, float en char.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://lrutten.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

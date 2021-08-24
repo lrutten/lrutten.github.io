@@ -23,6 +23,9 @@
     <loc>https://lrutten.github.io/tags/</loc>
     <lastmod>1975-09-21T14:00:03+01:00</lastmod>
   </url><url>
+    <loc>https://lrutten.github.io/proglang/</loc>
+    <priority>0</priority>
+  </url><url>
     <loc>https://lrutten.github.io/about/</loc>
   </url>
 </urlset>
