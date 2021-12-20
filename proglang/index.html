@@ -61,7 +61,7 @@ This example shows the main() function as an entrypoint for the program."><scrip
   "headline": "",
   "description" : "Introduction This text gives an overview for the following programming languages:\n C C\u002b\u002b Java Bash Python Ruby Javascript Dart Ocaml Go Rust Clojure Scheme Coloru Haskell XSL Prolog Erlang Elixir Crystal  C This is the famous first C example:\n#include \u0026lt;stdio.h\u0026gt; int main(int argc, char **argv) { printf(\u0026quot;hello world\\n\u0026quot;); } Variables and types Every variable must be declared.\nThis example shows the main() function as an entrypoint for the program.",
   "inLanguage" : "en",
-  "wordCount":  55827 ,
+  "wordCount":  55510 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
   "image" : "https:\/\/lrutten.github.io\/",
@@ -788,8 +788,6 @@ a--;
 <p>Watch out:</p>
 <pre><code>x*y++ is x\*(y++)
 </code></pre>
-<p>De <code>++</code> en <code>--</code> operatoren kunnen voor of na de variabele geplaatst
-worden. Dit betekent vooraf of achteraf verhogen.</p>
 <p>Use postfix of prefix notatie:</p>
 <pre><code>m = 0;
 n = ++m; // n gets 1
@@ -1125,26 +1123,22 @@ case 'f' :
    printf(&quot;fitis, phylloscopus trochilus\n&quot;);
    break;
 </code></pre>
-<h2 id="lussen-en-andere-controlemiddelen">Lussen en andere controlemiddelen</h2>
-<h3 id="while-herhalingsopdracht"><code>while</code> herhalingsopdracht</h3>
-<p>Met deze herhalingsopdracht hebben we al kennis gemaakt. De algemene
-vorm is:</p>
-<pre><code>while (uitdrukking)
-   opdracht;
+<h2 id="loops-and-other-control-expressions">Loops and other control expressions</h2>
+<h3 id="while-loop"><code>while</code> loop</h3>
+<p>This is the general form:</p>
+<pre><code>while (conditional expression)
+   action;
 
-while (uitdrukking)
+while (conditional expression)
 {
-   opdracht1;
-   opdracht2;
+   action1;
+   action2;
 }
 </code></pre>
-<p>De opdrachten worden herhaald zolang de voorwaarde waar is. In de
-opdrachten moet er steeds een voorkomen die de waarde van de geteste
-uitdrukking verandert. Indien dit niet zo is, stopt de herhaling nooit.</p>
-<p>In de volgende voorbeelden wordt <code>i</code> als lusteller gebruikt. In elk
-voorbeeld wordt <code>i</code> op een andere wijze verhoogd.</p>
+<p>As long as the conditional expression returns true, the <code>while</code> actions will be executed.</p>
+<p>Here are some examples each of which shows a different way to increment <code>i</code>.</p>
 <ul>
-<li>geen einde:</li>
+<li>no end:</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>i = 1;
@@ -1154,7 +1148,7 @@ while (i &lt; 10)
 }
 </code></pre>
 <ul>
-<li>resultaat: 2 - 9</li>
+<li>result: 2 - 9</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>i = 1;
@@ -1164,7 +1158,7 @@ while (++i &lt; 10)
 }
 </code></pre>
 <ul>
-<li>resultaat: 2 - 10</li>
+<li>result: 2 - 10</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>i = 1;
@@ -1174,7 +1168,7 @@ while (i++ &lt; 10)
 }
 </code></pre>
 <ul>
-<li>resultaat: 1 - 9</li>
+<li>result: 1 - 9</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>i = 1;
@@ -1184,22 +1178,16 @@ while (i &lt; 10)
    i++;
 }
 </code></pre>
-<p>De structuur van het laatste voorbeeld:</p>
-<p>!&lt;&gt;</p>
-<p>Deze herhaling bestaat uit de initialisatie van de lusteller, het testen
-van de eindvoorwaarde en het verhogen van de lusteller.</p>
 <h3 id="for-herhalingsopdracht"><code>for</code> herhalingsopdracht</h3>
-<p>Het laatste voorbeeld van <code>while</code> is nu met een <code>for</code> herschreven zonder
-dat de werking verandert. Ook voor dit voorbeeld geldt het
-stroomdiagramma.</p>
+<p>The <code>for</code> loop is handy when the number of iteration is known in advance.</p>
 <pre><code>for (i = 1; i &lt; 10; i++)
 {
    printf(&quot;dit is i: %d\n&quot;, i);
 }
 </code></pre>
-<p>Dit zijn nog andere voorbeelden:</p>
+<p>Some other examples:</p>
 <ul>
-<li>een lege opdracht in herhaling</li>
+<li>empty action</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>for (n = 1; n &lt;= 10000; n++)
@@ -1208,7 +1196,7 @@ stroomdiagramma.</p>
 }
 </code></pre>
 <ul>
-<li>stap verschillend van 1</li>
+<li>step is not 1</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>for (n = 2; n &lt; 100; n += 11)
@@ -1217,7 +1205,7 @@ stroomdiagramma.</p>
 }
 </code></pre>
 <ul>
-<li>stap verhogen met <code>\*</code></li>
+<li>step change with <code>*</code></li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>for (bedrag = 100; bedrag &lt; 200; bedrag *= 1.08)
@@ -1226,7 +1214,7 @@ stroomdiagramma.</p>
 }
 </code></pre>
 <ul>
-<li><code>char</code> als lusteller</li>
+<li><code>char</code> als loop counter</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>for (t = 'a'; t &lt;= 'z'; t++)
@@ -1235,7 +1223,7 @@ stroomdiagramma.</p>
 }
 </code></pre>
 <ul>
-<li>een opdracht minder in <code>for</code></li>
+<li>the last part of the <code>for</code> left out</li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>for (u = 1; u &lt; 1000; )
@@ -1244,7 +1232,7 @@ stroomdiagramma.</p>
 }
 </code></pre>
 <ul>
-<li>geen opdrachten in <code>for</code></li>
+<li>empty parts in <code>for</code></li>
 </ul>
 <!-- raw HTML omitted -->
 <pre><code>for ( ; ; )
@@ -1253,50 +1241,34 @@ stroomdiagramma.</p>
 }
 </code></pre>
 <p>De algemene vorm van de <code>for</code> opdracht is:</p>
-<pre><code>for ( initialisatie ; test ; aanpassen )
-   opdracht
+<pre><code>for ( initialization ; test ; change )
+   action
 </code></pre>
-<p>Tussen de haakjes van de <code>for</code> opdracht kunnen we 3 opdrachten
-onderbrengen. Als we bijvoorbeeld een extra opdracht willen laten
-uitvoeren bij de initialisatie, dan wordt deze opdracht met een komma
-bijgevoegd. Dit noemt men in C de komma bewerking.</p>
-<pre><code>for (j=1, bedrag = 100; bedrag &lt; 200; j++, bedrag *= 1.08)
+<p>Use <code>,</code> if one of the paths between de brackets of the <code>for</code> needs an extra action.</p>
+<pre><code>for (j=1, amount = 100; amount &lt; 200; j++, amount *= 1.08)
 {
-   printf(&quot;jaar: %d bedrag: %.2f\n&quot;, j, bedrag);
+   printf(&quot;year: %d amount: %.2f\n&quot;, j, amount);
 }
 </code></pre>
-<h3 id="do-while-herhalingsopdracht"><code>do while</code> herhalingsopdracht</h3>
-<p>Bij deze herhalingsopdracht wordt de voorwaarde getest nadat de opdracht
-uitgevoerd is. Dit betekent dat de opdracht minstens eenmaal uitgevoerd
-wordt, ook als de voorwaarde steeds false is.</p>
-<p>De algemene vorm is:</p>
+<h3 id="do-while-loop"><code>do while</code> loop</h3>
+<p>This type of loop has its conditional expression at the end.
+This means that the actions will be executed at least once.</p>
+<p>The general form is:</p>
 <pre><code>do
-   opdracht
-while ( voorwaarde );
+   action
+while ( conditional expression );
 </code></pre>
-<p>In het volgende voorbeeld worden de tekens van een ingegeven regel
-omgezet in de decimale ASCII code.</p>
+<p>This example reads the characters of the input line.</p>
 <pre><code>do
 {
    scanf(&quot;%c&quot;, &amp;teken);
    printf(&quot;%c heeft als code %d\n&quot;, teken, teken);
 } while (teken != '\n');
 </code></pre>
-<h3 id="break-en-continue-bij-herhalingsopdrachten"><code>break</code> en <code>continue</code> bij herhalingsopdrachten</h3>
-<p>Bij complexere problemen is het wenselijk om een herhaling voortijdig af
-te breken of te herstarten. Hiervoor voorziet C de opdrachten break en
-continue. Met een break kunnen we op een handige manier de herhaling
-stopzetten midden in een reeks opdrachten. Dit probleem kan ook opgelost
-worden zonder gebruik te maken van break. Dit vraagt dan wel iets meer
-denkwerk. Het is dan ook om deze reden dat niet alle programmeertalen
-deze mogelijkheid kennen.</p>
+<h3 id="break-en-continue-with-loopq"><code>break</code> en <code>continue</code> with loopq</h3>
+<p><code>break</code> and <code>continue</code> infuence the way the actions within te loop are executed.</p>
 <h4 id="break"><code>break</code></h4>
-<p>In het volgende voorbeeld wordt in de herhaling telkens een getal
-ingelezen en het kwadraat hiervan op het scherm gedrukt. De herhaling
-gaat verder totdat ofwel het ingegeven getal nul is ofwel het aantal
-ingelezen getallen groter dan 20 is. Hier heeft de <code>while</code> opdracht een
-voorwaarde die steeds waar is. Het stopzetten van de herhaling wordt met
-<code>break</code> uitgevoerd.</p>
+<p>In this example <code>break</code> is used twice to stop the loop.</p>
 <pre><code>i = 0;
 while (1 == 1)
 {
@@ -1314,7 +1286,7 @@ while (1 == 1)
    }
 }
 </code></pre>
-<p>Het is mogelijk om dit te herschrijven zonder de <code>break</code> opdracht.</p>
+<p>This is the same example rewritten without <code>break</code>.</p>
 <pre><code>#define FALSE 0
 #define TRUE 1
 
@@ -1340,10 +1312,8 @@ while ( !einde )
 }
 </code></pre>
 <h4 id="continue"><code>continue</code></h4>
-<p>Dit is een opdracht die de uitvoering van de herhalingsopdracht laat
-herstarten. Anders geformuleerd: de opdrachten na <code>continue</code> worden
-overgeslagen. In het volgende voorbeeld wordt in de <code>while</code> opdracht de
-verwerking van spaties overgeslagen.</p>
+<p>This keyword forces the loop to restart.
+It is a way to jump over a number of actions.</p>
 <pre><code>while( (ch = getchar() ) != EOF)
 {
    if (ch == ' ')
@@ -1354,7 +1324,7 @@ verwerking van spaties overgeslagen.</p>
    teller++;
 }
 </code></pre>
-<p>Dit voorbeeld kan herschreven worden zonder <code>continue</code>.</p>
+<p>And written without <code>continue</code>:</p>
 <pre><code>while( (ch = getchar() ) != EOF)
 {
    if (ch != ' ')
@@ -1365,14 +1335,8 @@ verwerking van spaties overgeslagen.</p>
 }
 </code></pre>
 <h3 id="goto"><code>goto</code></h3>
-<p>De <code>goto</code> opdracht maakt het mogelijk om naar een andere plaats in het
-programma te springen. Dit is een opdracht die nog stamt uit het FORTRAN
-tijdperk. Deze opdracht wordt bijna nooit meer gebruikt. De <code>goto</code> is
-inmiddels overbodig geworden. Met gestructureerd programmeren kan men
-immers iedere mogelijke constructie opbouwen zonder <code>goto</code> te gebruiken.
-Programma’s met <code>goto</code> zijn dikwijls moeilijk leesbaar en daardoor
-slecht onderhoudbaar. Gebruik daarom geen <code>goto</code> en beschouw het als
-onbestaande. Om deze redenen wordt de <code>goto</code> niet verder besproken <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>The <code>goto</code> keyword can be used to jump to a different point in the program.
+It should be avoided. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <h2 id="functies">Functies</h2>
 <h3 id="kennismaking">Kennismaking</h3>
 <p>Bij een van de eerste programmavoorbeelden hebben we al kennisgemaakt
