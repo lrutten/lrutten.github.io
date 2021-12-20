@@ -61,7 +61,7 @@ This example shows the main() function as an entrypoint for the program."><scrip
   "headline": "",
   "description" : "Introduction This text gives an overview for the following programming languages:\n C C\u002b\u002b Java Bash Python Ruby Javascript Dart Ocaml Go Rust Clojure Scheme Coloru Haskell XSL Prolog Erlang Elixir Crystal  C This is the famous first C example:\n#include \u0026lt;stdio.h\u0026gt; int main(int argc, char **argv) { printf(\u0026quot;hello world\\n\u0026quot;); } Variables and types Every variable must be declared.\nThis example shows the main() function as an entrypoint for the program.",
   "inLanguage" : "en",
-  "wordCount":  55510 ,
+  "wordCount":  54333 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
   "image" : "https:\/\/lrutten.github.io\/",
@@ -1339,12 +1339,8 @@ It is a way to jump over a number of actions.</p>
 It should be avoided. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <h2 id="functies">Functies</h2>
 <h3 id="kennismaking">Kennismaking</h3>
-<p>Bij een van de eerste programmavoorbeelden hebben we al kennisgemaakt
-met functies. Een functie groepeert meerdere opdrachten bij een naam.
-Deze opdrachten kunnen uitgevoerd worden, als we de functienaam als een
-gewone opdracht gebruiken.</p>
-<p>In het volgende voorbeeld wordt de functie lijn gebruikt om tweemaal een
-lijn van sterretjes op het scherm te schrijven.</p>
+<p>A function groups a set of actions. Each function has a name which is used to
+call the function.</p>
 <pre><code>void lijn()
 {
    int i;
@@ -1359,33 +1355,23 @@ lijn van sterretjes op het scherm te schrijven.</p>
 int main()
 {
    lijn();
-   printf(&quot;Dit is de cursus C\n&quot;);
+   printf(&quot;This is the C course\n&quot;);
    lijn();
 
    return 0;
 }
 </code></pre>
-<p>Uit dit voorbeeld blijkt ook dat we variabelen kunnen declareren binnen
-de functie. De variabele <code>i</code> mag alleen maar gebruikt worden binnen de
-functie. De declaratie van de variabelen binnen de functie worden vlak
-na de openingsaccolade vermeld. Deze vorm van lokale variabelen is
-trouwens niet beperkt tot functies. De syntax is algemeen geldig: na
-elke openingsaccolade die opdrachten groepeert, mogen we variabelen
-declareren.</p>
+<p>Within a function local variables can be declared and used.
+The space for these variables is reserved on the stack and the variables have a limited lifecycle.
+At the return of the function the stack is cleaned up and the bytes used to hold the values of the
+local variables is released.</p>
 <h3 id="parameters">Parameters</h3>
-<p>We kunnen de flexibiliteit van een functie verhogen als we bij de oproep
-een waarde doorgeven. Dit betekent dat we een gedeelte van de werking
-verschuiven naar de oproep van de functie. In het voorbeeld wordt
-vastgelegd dat de functie <code>spatie()</code> een waarde van het type <code>int</code>
-ontvangt bij de oproep. De waarde komt terecht in de variabele <code>aantal</code>
-en wordt door de functie gebruikt om het aantal spaties te bepalen. Bij
-de oproep wordt de door te geven waarde tussen de functiehaken
-geplaatst.</p>
-<pre><code>void spatie(int aantal)
+<p>The next example shows the use of a single parameter.</p>
+<pre><code>void space(int number)
 {
    int i;
 
-   for (i=0; i &lt; aantal; i++)
+   for (i=0; i &lt; number; i++)
    {
       printf(&quot; &quot;);
    }
@@ -1393,22 +1379,21 @@ geplaatst.</p>
 
 int main()
 {
-   printf(&quot;Dit is de cursus C\n&quot;);
-   spatie(16);
+   printf(&quot;Dit is the C course\n&quot;);
+   space(16);
    printf(&quot;+++\n&quot;);
 
    return 0;
 }
 </code></pre>
-<p>In verband met parameters kent men de volgende terminologie:</p>
+<p>The following terminology is used when talking about parameters:</p>
 <dl>
-<dt>formele parameter</dt>
-<dd>de variabele die de doorgegeven waarde ontvangt</dd>
-<dt>actuele parameter</dt>
-<dd>de werkelijke waarde die doorgegeven wordt.</dd>
+<dt>formal parameter</dt>
+<dd>the variabele as it is declared while writing the function</dd>
+<dt>actual parameter</dt>
+<dd>the actual value which is passed on to the function.</dd>
 </dl>
-<p>We kunnen een functie met meerdere parameters voorzien. De formele en
-actuele parameters worden gescheiden door komma’s.</p>
+<p>It is possible to write more than one parameter.</p>
 <pre><code>tlijn(char t, int n)
 {
    int i;
@@ -1419,9 +1404,9 @@ actuele parameters worden gescheiden door komma’s.</p>
    }
 }
 </code></pre>
-<p>De functie <code>tlijn()</code> kan zo opgeroepen worden:</p>
-<pre><code>tlijn('+',20);
-tlijn('=',45);
+<p>When the function <code>tlijn()</code> is called, give it 2 actual parameters:</p>
+<pre><code>tlijn('+', 20);
+tlijn('=', 45);
 </code></pre>
 <h3 id="return-en-functietype">Return en functietype</h3>
 <p>Als we een resultaat van een functie willen bekomen, dan wordt dit
@@ -5827,7 +5812,7 @@ int main()
 }
 </code></pre>
 <h2 id="de-stl-containerbibliotheek">De STL containerbibliotheek</h2>
-<h3 id="een-vector-voorbeeld">Een vector voorbeeld</h3>
+<h3 id="een-vector-voorbeeld">Een <code>vector</code> voorbeeld</h3>
 <p>In dit voorbeeld wordt het gebruik van <code>vector</code> getoond.</p>
 <pre><code>#include &lt;vector&gt;
 
@@ -5886,7 +5871,7 @@ int main()
    return 0;
 }
 </code></pre>
-<h3 id="een-list-voorbeeld">Een list voorbeeld</h3>
+<h3 id="een-list-voorbeeld">Een <code>list</code> voorbeeld</h3>
 <p>Hier is het voorgaande voorbeeld overgenomen en <code>vector</code> door <code>list</code>
 vervangen. De herhaling waarbij de rechte haken <code>\[\]</code> worden gebruikt
 voor indexering is geschrapt. Bij <code>list</code> en andere containers is dit
@@ -5948,405 +5933,6 @@ int main()
 
    return 0;
 }
-</code></pre>
-<h3 id="geheugenlekken-opsporen">Geheugenlekken opsporen</h3>
-<p>In dit voorbeeld wordt een ingenieus systeem toegepast om geheugenlekken
-op te sporen. Elke klasse moet afgeleid worden van <code>GElem</code>. Er moet ook
-een enkel globaal GLijst gemaakt worden. Op het einde van het programma
-wordt automatisch gemeld welke objecten nog niet vrijgegeven worden.</p>
-<pre><code>#ifndef DBG_GEHEUGEN
-
-#include &lt;stdio.h&gt;
-#include &lt;list&gt;
-
-using namespace std;
-
-// deze klasse is een element bedoeld om in een lijst
-// op te slaan. Omdat vanuit deze klasse verwezen
-// wordt naar de lijst klasse en omdat dit compilatiefouten
-// geeft, wordt de lijstklasse als parameter class T doorgegeven
-
-template&lt;class T&gt;
-class GElem_tm     // dit is de elementklasse met template parameter
-{
-public:
-   GElem_tm()
-   {
-      printf(&quot;GElem()\n&quot;);
-      T::haal().voegbij(this); // T wordt GLijst
-   }
-   ~GElem_tm()
-   {
-      printf(&quot;~GElem()\n&quot;);
-      T::haal().verwijder(this); // T wordt GLijst
-   }
-
-   // deze functie moet een andere invulling
-   // krijgen in de afleiding
-   virtual void toon()
-   {
-      printf(&quot;GElem\n&quot;);
-   }
-};
-
-class GLijst;  // voorwaartse declaratie van een klasse
-               // hiermee wordt de compiler verteld dat
-               // deze naam een klasse is
-
-          // dit is de elementklasse met template parameter
-          // de actuele parameter is GLijst
-typedef GElem_tm&lt;GLijst&gt; GElem;
-
-
-// de klasse GLijst houd een lijst van GElem bij
-// elke in de toepassing gebruikte klasse
-// moet overerven van GElem
-
-class GLijst
-{
-public:
-   GLijst()
-   {
-      printf(&quot;GLijst()\n&quot;);
-   }
-   void voegbij(GElem *em)
-   {
-      lijst.push_back(em);
-   }
-   void verwijder(GElem *em)
-   {
-      lijst.remove(em);
-   }
-   void toon()
-   {
-      printf(&quot;GLijst:\n&quot;);
-
-      printf(&quot;lijst van nog niet vrijgegeven objecten\n&quot;);
-
-      list&lt;GElem *&gt;::iterator it = lijst.begin();
-      while (it != lijst.end())
-      {
-         GElem *q = *it;
-         q-&gt;toon();
-
-         it++;
-      }
-
-   }
-   ~GLijst()
-   {
-      printf(&quot;~GLijst\n&quot;);
-      list&lt;GElem *&gt;::iterator it = lijst.begin();
-      while (it != lijst.end())
-      {
-         printf(&quot;element vergeten vrij te geven\n&quot;);
-         GElem *q = *it;
-         q-&gt;toon();
-
-
-      /* Deze delete zorgt er ook voor dat het GElem uit
-         de lijst verwijderd is. Om problemen te vermijden
-         met it laten we it steeds naar het begin van de lijst
-         wijzen.
-       */
-         // verwijder GElem uit lijst en geheugen
-         delete *it;
-
-         // het begin van de lijst is veranderd,
-         // daarom opnieuw instellen
-         it = lijst.begin();
-
-         // dit zou fout zijn
-         //  it++;
-      }
-   }
-
-
-   // deze functie geeft een referentie naar het
-   // ene en enige GLIijst object terug
-   static GLijst &amp;haal()
-   {
-       return geheugen;
-   }
-   // dit is een statisch GLijst object
-   static GLijst geheugen;
-
-private:
-   list&lt;GElem *&gt; lijst;
-};
-
-#endif
-
-#include &lt;stdio.h&gt;
-#include &quot;dbg-geheugen.h&quot;
-
-using namespace std;
-
-// dit is een klasse die getest wordt
-// tegen geheugenlekken, vandaar
-// de erfenis van GElem
-
-class Punt : public GElem
-{
-private:
-  int x;
-  int y;
-
-public:
-  Punt(int ix, int iy) : x(ix), y(iy)
-  {
-  }
-  ~Punt()
-  {
-    printf(&quot;~Punt\n&quot;);
-  }
-
-  void toon()
-  {
-    printf(&quot;Punt: %d, %d\n&quot;, x, y);
-  }
-};
-
-
-// dit is het object met daarin de lijst
-// de constructor en destructor worden
-// automatisch gestart
-GLijst GLijst::geheugen;
-
-int main()
-{
-   printf(&quot;start\n&quot;);
-
-   Punt *p1 = new Punt(5,6);
-   Punt *p2 = new Punt(7,8);
-   Punt *p3 = new Punt(10,10);
-
-
-   // deze toon geeft al aan dat er
-   // Punt objecten in het geheugen
-   // zitten
-   GLijst::geheugen.toon();
-   printf(&quot;einde\n&quot;);
-
-   // nadat deze accolade overschreden is,
-   // wordt de destructor van GLijst gestart
-   // en die meldt dat er nog 3 objecten
-   // in het geheugen zitten
-
-   return 0;
-}
-</code></pre>
-<h2 id="qt-voorbeelden">Qt Voorbeelden</h2>
-<h3 id="kleinste-voorbeeld">Kleinste voorbeeld</h3>
-<p>Dit is een klein Qt voorbeeld met een <code>paint()</code> functie.</p>
-<pre><code>#include &lt;qapplication.h&gt;
-#include &lt;qpushbutton.h&gt;
-#include &lt;qfont.h&gt;
-#include &lt;qpainter.h&gt;
-
-
-class MyWidget : public QWidget
-{
-public:
-    MyWidget( QWidget *parent=0, const char *name=0 );
-
-protected:
-    void paintEvent( QPaintEvent * );
-};
-
-
-MyWidget::MyWidget( QWidget *parent, const char *name )
-        : QWidget( parent, name )
-{
-    setMinimumSize( 200, 120 );
-    setMaximumSize( 200, 120 );
-
-    QPushButton *quit = new QPushButton( &quot;Quit&quot;, this, &quot;quit&quot; );
-    quit-&gt;setGeometry( 62, 40, 75, 30 );
-    quit-&gt;setFont( QFont( &quot;Times&quot;, 18, QFont::Bold ) );
-
-    connect( quit, SIGNAL(clicked()), qApp, SLOT(quit()) );
-}
-
-void MyWidget::paintEvent( QPaintEvent * )
-{
-    QString s = &quot;Hallo&quot;;
-    QPainter p( this );
-    p.drawText( 20, 20, s );
-}
-
-
-int main( int argc, char **argv )
-{
-    QApplication a( argc, argv );
-
-    MyWidget w;
-    w.setGeometry( 100, 100, 200, 120 );
-    a.setMainWidget( &amp;w );
-    w.show();
-    return a.exec();
-}
-</code></pre>
-<h3 id="figuren-voorbeeld">Figuren voorbeeld</h3>
-<p>!&lt;&gt;</p>
-<pre><code>/****************************************************************
-**
-** Qt figuren vb
-**
-****************************************************************/
-
-#include &lt;qapplication.h&gt;
-#include &lt;qpushbutton.h&gt;
-#include &lt;qfont.h&gt;
-#include &lt;qpainter.h&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-
-class Figuur
-{
-public:
-   Figuur(int ix, int iy) : x(ix), y(iy)
-   {
-   }
-   virtual void teken(QPainter *p, int dx, int dy) = 0;
-
-protected:
-   int x;
-   int y;
-};
-
-class Lijn : public Figuur
-{
-public:
-   Lijn(int ix1, int iy1, int ix2, int iy2) : Figuur(ix1, iy1), x2(ix2), y2(iy2)
-   {
-   }
-
-   void teken(QPainter *p, int dx, int dy);
-
-private:
-   int x2;
-   int y2;
-};
-
-class Rechthoek : public Figuur
-{
-public:
-   Rechthoek(int ix1, int iy1, int ix2, int iy2) : Figuur(ix1, iy1), x2(ix2), y2(iy2)
-   {
-   }
-
-   void teken(QPainter *p, int dx, int dy);
-
-private:
-   int x2;
-   int y2;
-};
-
-
-
-
-class SFiguur : public Figuur
-{
-public:
-   SFiguur(int ix, int iy) : Figuur(ix, iy)
-   {
-   }
-   void voegbij(Figuur *f);
-   void teken(QPainter *p, int dx, int dy);
-
-private:
-   vector&lt;Figuur *&gt; figuren;
-};
-
-
-
-void SFiguur::voegbij(Figuur *f)
-{
-   figuren.push_back(f);
-}
-
-void Lijn::teken(QPainter *p, int dx, int dy)
-{
-   p-&gt;drawLine(dx + x, dy + y, dx + x2, dy + y2);
-}
-
-void Rechthoek::teken(QPainter *p, int dx, int dy)
-{
-   p-&gt;drawRect(dx + x, dy + y, x2 - x, y2 - y);
-}
-
-void SFiguur::teken(QPainter *p, int dx, int dy)
-{
-   for (int i= 0;i&lt;figuren.size(); i++)
-   {
-      figuren[i]-&gt;teken(p, dx + x, dy + y);
-   }
-}
-
-class FVenster : public QWidget
-{
-public:
-    FVenster( QWidget *parent=0, const char *name=0 );
-
-protected:
-    void paintEvent( QPaintEvent * );
-
-private:
-   SFiguur *fig;
-};
-
-
-FVenster::FVenster( QWidget *parent, const char *name )
-        : QWidget( parent, name )
-{
-    setMinimumSize( 400, 300 );
-    setMaximumSize( 400, 300 );
-
-    // maak een SFiguur
-    fig = new SFiguur(100, 100);
-    fig-&gt;voegbij(new Rechthoek(0, 30, 30, 60));
-    fig-&gt;voegbij(new Lijn(0, 30, 15, 0));
-    fig-&gt;voegbij(new Lijn(15, 0, 30, 30));
-}
-
-void FVenster::paintEvent( QPaintEvent * )
-{
-    QString s = &quot;Hallo&quot;;
-    QPainter p( this );
-
-    fig-&gt;teken(&amp;p, 0, 0);
-}
-
-
-int main( int argc, char **argv )
-{
-    QApplication a( argc, argv );
-
-    FVenster w;
-    w.setGeometry( 100, 100, 200, 120 );
-    a.setMainWidget( &amp;w );
-    w.show();
-    return a.exec();
-}
-</code></pre>
-<p>Dit is de <code>Makefile</code> om beide voorbeelden te compileren. Je ziet dat er
-gelinkt wordt met de <code>qt</code> bibliotheek die zich in de directory
-<code>/usr/lib/qt/lib</code> bevindt.</p>
-<pre><code>gpainter: qpainter.o
-    g++ -o qpainter qpainter.o -L/usr/lib/qt/lib -lqt
-
-qpainter.o: qpainter.cpp
-    g++ -c qpainter.cpp
-
-figuren: figuren.o
-    g++ -o figuren figuren.o -L/usr/lib/qt/lib -lqt
-
-
-figuren.o: figuren.cpp
-    g++ -c figuren.cpp
 </code></pre>
 <h1 id="java">Java</h1>
 <p>De programmeertaal Java.</p>
