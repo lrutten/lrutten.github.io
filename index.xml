@@ -23,10 +23,9 @@
       
       <guid>https://lrutten.github.io/proglang/</guid>
       <description>Introduction This text gives an overview for the following programming languages:
- C C++ Java  C This is the famous C example:
+ C C++ Java Bash Python Ruby Javascript Dart Ocaml Go Rust Clojure Scheme Coloru Haskell XSL Prolog Erlang Elixir Crystal  C This is the famous first C example:
 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char **argv) { printf(&amp;quot;hello world\n&amp;quot;); } Variables and types Every variable must be declared.
-This example shows the main() function as an entrypoint for the program. It contains one local variable num.
-#include &amp;lt;stdio.h&amp;gt; int main() /* a sample program */ { int num; num = 1; printf(&amp;quot;%d is an integer number\n&amp;quot;, num ); return 0; } help() is a simple function.</description>
+This example shows the main() function as an entrypoint for the program.</description>
     </item>
     
     <item>
